@@ -763,49 +763,12 @@
 `spring-qa-dependencies` requires the following tech stack to either run, build, test, or deploy:
 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
-| **Dependency** | **Description** | **Version** | **Type** |
-| -------------- | --------------- | ----------- | -------- |
- | [generator-license@5.1.0](https://github.com/jozefizso/generator-license) | License generator for Yeoman based projects. | 5.1.0 | production |
- | [generator-node@2.3.0](https://github.com/yeoman/generator-node) | Create a Node.js module | 2.3.0 | production |
- | [git-remote-origin-url@2.0.0](https://github.com/sindresorhus/git-remote-origin-url#readme) | Get the remote origin url of a git repository | 2.0.0 | production |
- | [git-url-parse@7.0.1](https://github.com/IonicaBizau/git-url-parse) | A high level git url parser for common git providers. | 7.0.1 | production |
- | [github-username@4.1.0](https://github.com/sindresorhus/github-username#readme) | Get a GitHub username from an email address | 4.1.0 | production |
- | [inquirer-npm-name@2.0.0](https://github.com/SBoudrias/inquirer-npm-name#readme) | Helper function using inquirer to validate a value provided in a prompt does not exist as an npm package. | 2.0.0 | production |
- | [lodash@^4.17.4](https://lodash.com/) | Lodash modular utilities. | 4.17.4 | production |
- | [markdown-magic@0.1.19](https://github.com/DavidWells/markdown-magic#readme) | Automatically update markdown files with content from external sources | 0.1.19 | production |
- | [markdown-magic-dependency-table@1.2.2](https://github.com/camacho/markdown-magic-dependency-table#readme) | Generate table of information about dependencies automatically in markdown | 1.2.2 | production |
- | [markdown-magic-install-command@1.3.1](https://github.com/camacho/markdown-magic-install-command#readme) | Print install command for markdown file | 1.3.1 | production |
- | [markdown-magic-package-scripts@1.2.0](https://github.com/camacho/markdown-magic-package-scripts#readme) | Print list of scripts in package.json with descriptions | 1.2.0 | production |
- | [parse-author@2.0.0](https://github.com/jonschlinkert/parse-author) | Parse an author, contributor, maintainer or other 'person' string into an object with name, email and url properties following npm conventions. | 2.0.0 | production |
- | [update-notifier@2.2.0](https://github.com/yeoman/update-notifier#readme) | Update notifications for your CLI app | 2.2.0 | production |
- | [yeoman-generator@2.0.1](http://yeoman.io) | Rails-inspired generator system that provides scaffolding for your apps | 2.0.1 | production |
- | [babel-jest@21.2.0](https://github.com/facebook/jest#readme) | Jest plugin to use babel for transformation. | 21.2.0 | dev |
- | [babel-preset-env@1.6.0](https://babeljs.io/) | A Babel preset for each environment. | 1.6.0 | dev |
- | [babelify@7.3.0](https://github.com/babel/babelify) | Babel browserify transform | 7.3.0 | dev |
- | [check-node-version@2.1.0](https://github.com/parshap/check-node-version#readme) | Check installed versions of node and npm | 2.1.0 | dev |
- | [commitplease@2.7.10](https://github.com/jzaefferer/commitplease#readme) | Validates strings as commit messages | 2.7.10 | dev |
- | [coveralls@2.13.3](https://github.com/nickmerwin/node-coveralls#readme) | takes json-cov output into stdin and POSTs to coveralls.io | 2.13.3 | dev |
- | [eslint@4.8.0](https://eslint.org) | An AST-based pattern checker for JavaScript. | 4.8.0 | dev |
- | [eslint-config-xo-space@0.16.0](https://github.com/sindresorhus/eslint-config-xo-space#readme) | ESLint shareable config for XO with 2-space indent | 0.16.0 | dev |
- | [eslint-plugin-import@2.7.0](https://github.com/benmosher/eslint-plugin-import) | Import with sanity. | 2.7.0 | dev |
- | [eslint-plugin-jest@21.2.0](https://github.com/facebook/jest#readme) | Eslint rules for Jest | 21.2.0 | dev |
- | [eslint-plugin-jsdoc@3.1.3](https://github.com/gajus/eslint-plugin-jsdoc#readme) | JSDoc linting rules for ESLint. | 3.1.3 | dev |
- | [eslint-plugin-no-unsafe-innerhtml@1.0.16](https://github.com/mozfreddyb/eslint-plugin-no-unsafe-innerhtml/) | custom ESLint rule to disallows unsafe innerHTML, outerHTML and insertAdjacentHTML | 1.0.16 | dev |
- | [eslint-plugin-no-unsanitized@2.0.1](https://github.com/mozilla/eslint-plugin-no-unsanitized/) | ESLint rule to disallow unsanitized code | 2.0.1 | dev |
- | [eslint-plugin-node@5.2.0](https://github.com/mysticatea/eslint-plugin-node#readme) | Additional ESLint's rules for Node.js | 5.2.0 | dev |
- | [eslint-plugin-promise@3.5.0](https://github.com/xjamundx/eslint-plugin-promise#readme) | Enforce best practices for JavaScript promises | 3.5.0 | dev |
- | [eslint-plugin-scanjs-rules@0.2.1](https://github.com/mozfreddyb/eslint-plugin-scanjs-rules/) | ESLint plugin that contains ScanJS rules | 0.2.1 | dev |
- | [eslint-plugin-security@1.4.0](https://github.com/nodesecurity/eslint-plugin-security#readme) | Security rules for eslint | 1.4.0 | dev |
- | [eslint-plugin-standard@3.0.1](https://github.com/xjamundx/eslint-plugin-standard#readme) | ESlint Plugin for the Standard Linter | 3.0.1 | dev |
- | [eslint-plugin-xss@0.1.8](https://npmjs.org/package/eslint-plugin-xss) | Validates XSS related issues of mixing HTML and non-HTML content in variables. | 0.1.8 | dev |
- | [fixpack@2.3.1](https://github.com/henrikjoreteg/fixpack) | cli tool that cleans up package.json files. | 2.3.1 | dev |
- | [jest@21.2.1](http://facebook.github.io/jest/) | Delightful JavaScript Testing. | 21.2.1 | dev |
- | [jest-cli@21.2.1](http://facebook.github.io/jest/) | Delightful JavaScript Testing. | 21.2.1 | dev |
- | [markdown-toc@1.2.0](https://github.com/jonschlinkert/markdown-toc) | Generate a markdown TOC (table of contents) with Remarkable. | 1.2.0 | dev |
- | [nsp@2.8.1](https://github.com/nodesecurity/nsp#readme) | The Node Security (nodesecurity.io) command line interface | 2.8.1 | dev |
- | [standard-version@4.2.0](https://github.com/conventional-changelog/standard-version#readme) | replacement for `npm version` with automatic CHANGELOG generation | 4.2.0 | dev |
- | [yeoman-assert@3.1.0](http://yeoman.io) | Assert utility from yeoman | 3.1.0 | dev |
- | [yeoman-test@1.7.0](http://yeoman.io/authoring/testing.html) | Test utilities for Yeoman generators | 1.7.0 | dev |
+| **Dependency** | **Description** | **Version** | **License** | **Type** |
+| -------------- | --------------- | ----------- | ----------- | -------- |
+ | [commitplease@2.7.10](https://github.com/jzaefferer/commitplease#readme) | Validates strings as commit messages | 2.7.10 | MIT | dev | 
+ | [fixpack@2.3.1](https://github.com/henrikjoreteg/fixpack) | cli tool that cleans up package.json files. | 2.3.1 | MIT | dev | 
+ | [nsp@^2.6.3](https://github.com/nodesecurity/nsp#readme) | The Node Security (nodesecurity.io) command line interface | 2.8.1 | Apache-2.0 | dev | 
+ | [standard-version@4.2.0](https://github.com/conventional-changelog/standard-version#readme) | replacement for `npm version` with automatic CHANGELOG generation | 4.2.0 | ISC | dev | 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
 
