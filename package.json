@@ -7,7 +7,7 @@
     "email": "greg@swindle.net",
     "url": "https://github.com/gregswindle"
   },
-  "bugs": "https://github.com",
+  "bugs": "https://github.com/gregswindle/spring-qa-dependencies/issues",
   "commitplease": {
     "style": "angular",
     "types": [

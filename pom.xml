@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 
 	<name>spring-qa-dependencies</name>
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/gregswindle/spring-qa-dependencies</url>
 	<description>An online course sample project updated with quality assurance features.</description>
 
 	<properties>
@@ -108,18 +108,18 @@
 				<version>3.7.0</version>
 			</plugin>
 			<!-- JaCoCo code coverage configuration -->
-			<!-- Order of execution is (1) prepare agent is run to configure the property, 
-				then (2) unit tests are run, then (3) the check goal of jacoco is run to 
+			<!-- Order of execution is (1) prepare agent is run to configure the property,
+				then (2) unit tests are run, then (3) the check goal of jacoco is run to
 				check code coverage -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20.1</version>
 				<configuration>
-					<!-- (2) setup the argLine and run the unit tests. **NOTE the "jacocArgLine" 
-						property was configured the "prepare-agent" goal of Jacoco (see below). If 
-						you want to resolve the property value as late as possible (i.e. your dynamically 
-						alter this property value before reaching this phase), Maven gives you option 
+					<!-- (2) setup the argLine and run the unit tests. **NOTE the "jacocArgLine"
+						property was configured the "prepare-agent" goal of Jacoco (see below). If
+						you want to resolve the property value as late as possible (i.e. your dynamically
+						alter this property value before reaching this phase), Maven gives you option
 						to use @{jacocoArgLine} instead -->
 					<argLine>${jacocoArgLine} -Xmx256m</argLine>
 				</configuration>
@@ -163,8 +163,8 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.9</version>
 				<executions>
-					<!-- (1) Prepare agent runs in the init phase, it setups the jacocoProperty, 
-						so we can insert this to the maven sure fire argLine and get to run jacoco 
+					<!-- (1) Prepare agent runs in the init phase, it setups the jacocoProperty,
+						so we can insert this to the maven sure fire argLine and get to run jacoco
 						as agent. -->
 					<execution>
 						<id>prepare-agent</id>
@@ -178,7 +178,7 @@
 							</includes>
 						</configuration>
 					</execution>
-					<!-- (3) The check goal by default runs in the verify phase, we want 
+					<!-- (3) The check goal by default runs in the verify phase, we want
 						to fail the build if minimum code coverage checks aren't met. -->
 					<execution>
 						<id>check</id>
@@ -187,7 +187,7 @@
 						</goals>
 						<configuration>
 							<rules>
-								<!-- All classes must have 90% line and branch coverage. Note we 
+								<!-- All classes must have 90% line and branch coverage. Note we
 									use 2 d.p so that we get can any check failure messages reported to 2 d.p. -->
 								<rule>
 									<element>BUNDLE</element>
@@ -224,7 +224,7 @@
 										</limit>
 
 									</limits>
-									<!-- <excludes> <exclude>com.choudhury.codecoverage.Bye</exclude> 
+									<!-- <excludes> <exclude>com.choudhury.codecoverage.Bye</exclude>
 										</excludes> -->
 								</rule>
 							</rules>
