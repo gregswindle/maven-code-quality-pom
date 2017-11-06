@@ -62,7 +62,7 @@ _Highlight important security issues/concerns in this section._
 
 ## Semantic version and `CHANGELOG`
 
-The latest version of `spring-constructor-demo` is `0.0.0`. View the [`CHANGELOG`][changelog-url] for details.
+The latest version of `spring-constructor-demo` is `0.0.1-SNAPSHOT`. View the [`CHANGELOG`][changelog-url] for details.
 
 ## Contributing to `spring-constructor-demo`
 > [![Learn how to make a Pull Request with free training][prs-welcome-badge-image]][prs-welcome-url]

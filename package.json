@@ -1,7 +1,7 @@
 {
   "name": "spring-constructor-demo",
   "description": "An online course sample project updated with quality assurance features.",
-  "version": "0.0.0",
+  "version": "0.0.1-SNAPSHOT",
   "author": {
     "name": "Greg Swindle",
     "email": "greg@swindle.net",
