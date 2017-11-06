@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.swindle</groupId>
-	<artifactId>spring-constructor-demo</artifactId>
+	<artifactId>spring-qa-dependencies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-constructor-demo</name>
+	<name>spring-qa-dependencies</name>
 	<url>http://maven.apache.org</url>
 	<description>An online course sample project updated with quality assurance features.</description>
 

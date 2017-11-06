@@ -1,4 +1,4 @@
-# `spring-constructor-demo`
+# `spring-qa-dependencies`
 > A spike Spring solution for providing Maven POMs with quality assurance features.
 
 [![Build Status][travis-image]][travis-url]
@@ -14,7 +14,7 @@
 - [Usage](#usage)
 - [Security](#security)
 - [Semantic version and `CHANGELOG`](#semantic-version-and-changelog)
-- [Contributing to `spring-constructor-demo`](#contributing-to-spring-constructor-demo)
+- [Contributing to `spring-qa-dependencies`](#contributing-to-spring-qa-dependencies)
 - [License](#license)
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
@@ -27,7 +27,7 @@ A spike Spring solution for providing Maven POMs with quality assurance features
 
 __Prerequisite software__
 
-`spring-constructor-demo` is written in Java, which must be installed prior to use. Java requires Maven, which is used for installing dependencies.
+`spring-qa-dependencies` is written in Java, which must be installed prior to use. Java requires Maven, which is used for installing dependencies.
 
 ```shell
 # Install with Maven
@@ -37,7 +37,7 @@ __Prerequisite software__
 
 ## Configuration
 
- _If `spring-constructor-demo` requires configuration before developers can use it, explain it in this section. For example:_
+ _If `spring-qa-dependencies` requires configuration before developers can use it, explain it in this section. For example:_
 
 1. Contact support to create a partner OAuth2 application.
 2. Configure OAuth and Redirect URI
@@ -62,9 +62,9 @@ _Highlight important security issues/concerns in this section._
 
 ## Semantic version and `CHANGELOG`
 
-The latest version of `spring-constructor-demo` is `0.0.1-SNAPSHOT`. View the [`CHANGELOG`][changelog-url] for details.
+The latest version of `spring-qa-dependencies` is `0.0.1-SNAPSHOT`. View the [`CHANGELOG`][changelog-url] for details.
 
-## Contributing to `spring-constructor-demo`
+## Contributing to `spring-qa-dependencies`
 > [![Learn how to make a Pull Request with free training][prs-welcome-badge-image]][prs-welcome-url]
 >
 > We welcome contributors with [Pull Requests][prs-welcome-url]!
@@ -75,7 +75,7 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
   1. Create an issue to discuss the proposed change and ensure that it is likely to be merged:
       * [Report a defect][issues-new-defect-url] (aka "bug")
       * [Request a new feature][issues-new-feat-url]
-  1. Follow [Contributing to `spring-constructor-demo`][contributing-url]'s coding conventions and Git workflow if you're willing and able to program (or want to learn how).
+  1. Follow [Contributing to `spring-qa-dependencies`][contributing-url]'s coding conventions and Git workflow if you're willing and able to program (or want to learn how).
 
 ## License
 
@@ -93,19 +93,19 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
 [license-unlicense-url]: https://choosealicense.com/licenses/#unlicense
 [code-of-conduct-url]: ./CODE_OF_CONDUCT.md
 [contributing-url]: ./CONTRIBUTING.md
-[issues-new-defect-url]: /gregswindle/spring-constructor-demo.git/issues/new?title=fix%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Defect&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
-[issues-new-feat-url]: /gregswindle/spring-constructor-demo.git/issues/new?title=feat%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Feature&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
+[issues-new-defect-url]: /gregswindle/spring-qa-dependencies.git/issues/new?title=fix%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Defect&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
+[issues-new-feat-url]: /gregswindle/spring-qa-dependencies.git/issues/new?title=feat%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Feature&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
 [license-url]: ./LICENSE
 [nodejs-url]: https://nodejs.org
 [npmjs-url]: https://www.npmjs.com/
 [prs-welcome-badge-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs-welcome-url]: http://makeapullrequest.com
 
-[coveralls-image]: https://img.shields.io/coveralls/gregswindle/spring-constructor-demo/master.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/gregswindle/spring-constructor-demo
-[depstat-dev-image]: https://david-dm.org/gregswindle/spring-constructor-demo/dev-status.svg?style=flat-square
-[depstat-dev-url]: https://david-dm.org/gregswindle/spring-constructor-demo#info=devDependencies
-[depstat-image]: https://david-dm.org/gregswindle/spring-constructor-demo.svg?style=flat-square
-[depstat-url]: https://david-dm.org/gregswindle/spring-constructor-demo
-[travis-image]: https://img.shields.io/travis/gregswindle/spring-constructor-demo/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/gregswindle/spring-constructor-demo
+[coveralls-image]: https://img.shields.io/coveralls/gregswindle/spring-qa-dependencies/master.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/gregswindle/spring-qa-dependencies
+[depstat-dev-image]: https://david-dm.org/gregswindle/spring-qa-dependencies/dev-status.svg?style=flat-square
+[depstat-dev-url]: https://david-dm.org/gregswindle/spring-qa-dependencies#info=devDependencies
+[depstat-image]: https://david-dm.org/gregswindle/spring-qa-dependencies.svg?style=flat-square
+[depstat-url]: https://david-dm.org/gregswindle/spring-qa-dependencies
+[travis-image]: https://img.shields.io/travis/gregswindle/spring-qa-dependencies/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/gregswindle/spring-qa-dependencies

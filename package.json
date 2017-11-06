@@ -1,5 +1,5 @@
 {
-  "name": "spring-constructor-demo",
+  "name": "spring-qa-dependencies",
   "description": "An online course sample project updated with quality assurance features.",
   "version": "0.0.1-SNAPSHOT",
   "author": {
@@ -37,7 +37,7 @@
     "nsp": "^2.6.3",
     "standard-version": "4.2.0"
   },
-  "homepage": "https://github.com/gregswindle/spring-constructor-demo",
+  "homepage": "https://github.com/gregswindle/spring-qa-dependencies",
   "keywords": [
     "maven",
     "mvn",
@@ -47,7 +47,7 @@
   ],
   "license": "MIT",
   "maintainers": [],
-  "repository": "https://github.com/gregswindle/spring-constructor-demo.git",
+  "repository": "https://github.com/gregswindle/spring-qa-dependencies.git",
   "scripts": {
     "docs": "npm run docs:toc",
     "docs:toc": "md-magic --path '**/*.md' --ignore 'node_modules'",
