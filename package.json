@@ -1,0 +1,60 @@
+{
+  "name": "spring-constructor-demo",
+  "description": "An online course sample project updated with quality assurance features.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Greg Swindle",
+    "email": "greg@swindle.net",
+    "url": "https://github.com/gregswindle"
+  },
+  "bugs": "https://github.com",
+  "commitplease": {
+    "style": "angular",
+    "types": [
+      "build",
+      "chore",
+      "ci",
+      "docs",
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test"
+    ],
+    "scope": "\\S+.*"
+  },
+  "contributors": [],
+  "dependencies": {
+    "markdown-magic": "0.1.18",
+    "markdown-magic-install-command": "1.3.1"
+  },
+  "devDependencies": {
+    "commitplease": "2.7.10",
+    "fixpack": "2.3.1",
+    "nsp": "^2.6.3",
+    "standard-version": "4.2.0"
+  },
+  "homepage": "https://github.com/gregswindle/spring-constructor-demo",
+  "keywords": [
+    "maven",
+    "mvn",
+    "plugins",
+    "qa",
+    "spike"
+  ],
+  "license": "MIT",
+  "maintainers": [],
+  "repository": "https://github.com/gregswindle/spring-constructor-demo.git",
+  "scripts": {
+    "docs": "npm run docs:toc",
+    "docs:toc": "md-magic --path '**/*.md' --ignore 'node_modules'",
+    "lint": "npm run lint:manifest",
+    "lint:manifest": "fixpack",
+    "prepare": "npm run lint && npm run security",
+    "prepublish": "nsp check",
+    "security": "npm run security:nsp:scan",
+    "security:nsp:scan": "nsp check"
+  }
+}
