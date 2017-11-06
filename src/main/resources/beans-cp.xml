@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="myorg" class="net.swindle.springdemo.domain.Organization">
+		<constructor-arg value="Google" name="companyName" />
+		<property name="postalCode" value="65656" />
+		<property name="employeeCount" value="10500" />
+		<property name="slogan"
+			value="To organize the worlds information and make it universally accessible and useful" />
+
+		<property name="businessService" ref="ecommerceService" />
+	</bean>
+	<bean id="cloudService" class="net.swindle.springdemo.serviceimpl.CloudServiceImpl" />
+
+	<bean id="ecommerceService" class="net.swindle.springdemo.serviceimpl.EcommerceServiceImpl" />
+
+	<bean class="net.swindle.springdemo.serviceimpl.AgencyRecruitmentServiceImpl"
+		id="agency" />
+
+	<bean id="referral"
+		class="net.swindle.springdemo.serviceimpl.ReferralRecruitmentServiceImpl" />
+
+	<bean id="myhrdept" class="net.swindle.springdemo.domain.HumanResourceDept">
+		<constructor-arg name="recruitmentService" ref="referral" />
+		<constructor-arg name="organization" ref="myorg" />
+		<property name="deptName" value='Human Resource Department' />
+	</bean>
+</beans>
