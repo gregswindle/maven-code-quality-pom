@@ -1,6 +1,6 @@
 {
   "name": "spring-qa-dependencies",
-  "description": "An online course sample project updated with quality assurance features.",
+  "description": "A spike Spring solution for providing Maven POMs with quality assurance features.",
   "version": "0.0.1-SNAPSHOT",
   "author": {
     "name": "Greg Swindle",

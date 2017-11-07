@@ -7,7 +7,7 @@
 	<packaging>jar</packaging>
 	<name>spring-qa-dependencies</name>
 	<url>https://github.com/gregswindle/spring-qa-dependencies</url>
-	<description>An online course sample project updated with quality assurance features.</description>
+	<description>A spike Spring solution for providing Maven POMs with quality assurance features.</description>
 	<scm>
 		<url>https://github.com/gregswindle/spring-qa-dependencies.git</url>
 		<tag>HEAD</tag>
@@ -38,6 +38,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<versioneye.apiKey>${env.VERSIONEYE_API_KEY}</versioneye.apiKey>
 		<versioneye.organization>gregswindle_orga</versioneye.organization>
+		<sonar.property.organization>${env.SONAR_ORGANIZATION}</sonar.property.organization>
+		<sonar.property.login>${env.SONAR_TOKEN}</sonar.property.login>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -128,6 +130,12 @@
 			<groupId>org.apache.maven.skins</groupId>
 			<artifactId>maven-fluido-skin</artifactId>
 			<version>1.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+		<dependency>
+			<groupId>org.sonarsource.scanner.maven</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>3.3.0.603</version>
 		</dependency>
 	</dependencies>
 	<build>
@@ -340,6 +348,30 @@
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- Optional URL to server. Default value is http://localhost:9000 -->
+				<sonar.host.url>
+					https://sonarcloud.io
+				</sonar.host.url>
+				<sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+				<sonar.projectKey>gregswindle-github</sonar.projectKey>
+				<sonar.projectName>${project.artifactId}</sonar.projectName>
+				<sonar.projectVersion>${project.version}</sonar.projectVersion>
+				<sonar.links.homepage>${project.url}</sonar.links.homepage>
+				<sonar.links.ci>${project.ciManagement.url}</sonar.links.ci>
+				<sonar.links.scm>${project.scm.url}</sonar.links.scm>
+				<sonar.links.issue>${project.issueManagement.url}</sonar.links.issue>
+				<sonar.organization>${sonar.property.organization}</sonar.organization>
+				<sonar.login>${sonar.property.login}</sonar.login>
+			</properties>
+		</profile>
+	</profiles>
 	<reporting>
 		<plugins>
 			<plugin>

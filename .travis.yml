@@ -1,4 +1,8 @@
 ---
+language: java
+sudo: false
+install: true
+
 addons:
   sonarcloud:
     organization:   "$SONAR_ORGANIZATION"
@@ -9,9 +13,15 @@ addons:
     branches:
       - master
       - /[build|chore|ci|docs|feat|fix|perf|refactor|revert|spike|style|test].*/
-language: java
+
 jdk:
   - oraclejdk8
   - openjdk8
+
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
