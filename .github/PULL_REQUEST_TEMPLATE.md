@@ -19,8 +19,7 @@ replace this line and the following task completion line._
 - [ ] The source code is 100% covered with passing specs.
 
 ### 3. Code standards compliance
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
- [Google Checkstyle (Java)](http://checkstyle.sourceforge.net/google_style.html)
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) [![Google Checkstyle Docs][checkstyle-image]][checkstyle-google-url]
 
 #### 3.1. JavaScript
 
@@ -47,20 +46,22 @@ replace this line and the following task completion line._
 
 > **:information_source: These tasks are not required to open a PR, and may be addresses while the PR is open.**
 
+[checkstyle-google-url]: http://checkstyle.sourceforge.net/google_style.html
+[checkstyle-image]: ../docs/img/icon-checkstyle.png
 [coveralls-img]: https://coveralls.io/repos/github/gregswindle/spring-qa-dependencies/badge.svg
 [coveralls-url]: https://coveralls.io/github/gregswindle/spring-qa-dependencies
 [sonar-code-smells-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=code_smells
 [sonar-code-smells-url]: https://sonarcloud.io/component_measures/metric/code_smells/list?id=gregswindle-github&metric=code_smells
 [sonar-cognitive-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=cognitive_complexity
 [sonar-cognitive-url]: https://sonarcloud.io/component_measures/metric/cognitive_complexity/list?id=gregswindle-github&metric=cognitive_complexity
-[sonar-complexity-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=complexity
-[sonar-complexity-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=complexity
-[sonar-complexity-function-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=function_complexity
-[sonar-complexity-function-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=function_complexity
-[sonar-complexity-file-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=file_complexity
-[sonar-complexity-file-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=file_complexity
 [sonar-complexity-class-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=class_complexity
 [sonar-complexity-class-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=class_complexity
+[sonar-complexity-file-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=file_complexity
+[sonar-complexity-file-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=file_complexity
+[sonar-complexity-function-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=function_complexity
+[sonar-complexity-function-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=function_complexity
+[sonar-complexity-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=complexity
+[sonar-complexity-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=complexity
 [sonar-coverage-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=coverage
 [sonar-coverage-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=coverage
 [sonar-duplications-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=duplicated_line_density
@@ -77,5 +78,3 @@ replace this line and the following task completion line._
 [sonar-security-url]: https://sonarcloud.io/component_measures?id=gregswindle-github&metric=vulnerabilities
 [sonar-tech-debt-img]:  https://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=sqale_debt_ratio
 [sonar-tech-debt-url]: https://sonarcloud.io/component_measures/metric/sqale_index/list?id=gregswindle-github&metric=sqale_debt_ratio
-[checkstyle-image]: ../docs/img/icon-checkstyle.png
-[checkstyle-google-url]: http://checkstyle.sourceforge.net/google_style.html
