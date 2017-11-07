@@ -19,6 +19,13 @@ jdk:
   - openjdk8
 
 script:
+  - mvn site
+  - mvn checkstyle:check
+  - mvn findbugs:check
+  - mvn pmd:check
+  - mvn pmd:cpd-check
+
+after_script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
 cache:

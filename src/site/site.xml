@@ -9,6 +9,27 @@
 		<version>1.6</version>
 	</skin>
 	<body>
-		<menu name="Product Documentation" ref="reports"/>
+		<menu name="Overview">
+			<item name="About" href="index.html" />			
+		</menu>
+		<menu name="Quality Assurance Reports">
+			<item name="Checkstyle" href="checkstyle.html" title="Report on coding style conventions." />
+			<item name="FindBugs" href="findbugs.html" title="Verification of coding rules." />
+			<item name="PMD" href="pmd.html"  title="Generates a source code report with the FindBugs Library." />
+		</menu>
+		<menu name="Unit Test Reports">
+			<item name="Pass/Fail" href="surefire-report.html" title="Report on the test results of the project." />
+			<item name="Code Coverage" href="jacoco/index.html" />
+		</menu>
+		<menu name="Dependency Reports">
+			<item name="Dependency Updates" href="dependency-updates-report.html" />
+			<item name="Plugin Updates" href="plugin-updates-report.html" />
+			<item name="Property Updates" href="property-updates-report.html" />
+		</menu>
+		<menu name="Source Code">
+			<item name="Java" href="xref/index.html" />
+			<item name="JUnit" href="xref-test/index.html" />
+		</menu>
+		<menu name="Product Documentation" ref="reports" />
 	</body>
 </project>

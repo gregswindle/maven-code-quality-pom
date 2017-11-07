@@ -6,8 +6,18 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>spring-qa-dependencies</name>
+	<inceptionYear>2017</inceptionYear>
+	<description><![CDATA[<code>spring-qa-dependencies</code> is a spike Spring solution for providing Maven POMs with quality assurance features.<h3>Purpose</h3> <p>The purpose of the project is to use the Maven Site Plugin to:</p> <ol><li> Use the Maven Site Plugin to generate meaningful test and quality reporting artifacts</li> <li> Enforce test coverage thresholds and code standards</li> <li> Prevent source code that does not conform to standards from being merged into <code>master</code>.</li></ol>]]></description> 
 	<url>https://github.com/gregswindle/spring-qa-dependencies</url>
-	<description>A spike Spring solution for providing Maven POMs with quality assurance features.</description>
+	<developers>
+		<developer>
+			<name>Greg Swindle</name>
+			<url>https://github.com/gregswindle</url>
+			<id>gregswindle</id>
+			<email>greg@swindle.net</email>
+			<timezone>UTC-05:00</timezone>
+		</developer>
+	</developers>
 	<scm>
 		<url>https://github.com/gregswindle/spring-qa-dependencies.git</url>
 		<tag>HEAD</tag>
