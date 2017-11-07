@@ -8,8 +8,8 @@ addons:
     organization:   "$SONAR_ORGANIZATION"
     token:
       secure:       "$SONAR_TOKEN"
-    github_token:
-      secure:       "$GH_TOKEN"
+    # github_token:
+    #   secure:       "$GH_TOKEN"
     branches:
       - master
       - /[build|chore|ci|docs|feat|fix|perf|refactor|revert|spike|style|test].*/
