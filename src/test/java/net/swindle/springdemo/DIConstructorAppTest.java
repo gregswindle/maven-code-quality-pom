@@ -1,6 +1,7 @@
 package net.swindle.springdemo;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Rule;
@@ -18,10 +19,12 @@ public class DIConstructorAppTest {
 	@Rule
 	public OutputCapture capture = new OutputCapture();
 
-	// @Test
-	// public void testExistenceOfApp() {
-	// assertNotNull(DIConstructorApp.class);
-	// }
+	@Test
+	public void testExistenceOfApp() {
+		assertNotNull(DIConstructorApp.class);
+		DIConstructorApp app = new DIConstructorApp();
+		assertNotNull(app);
+	}
 
 	@Test
 	public void testMain() {
