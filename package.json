@@ -56,7 +56,7 @@
     "lint:manifest": "fixpack",
     "prepare": "npm run lint && npm run security",
     "prepublish": "npm run security",
-    "security": "npm run security:nsp:scan && npm run security:snyk:scan",
+    "security": "npm run security:nsp:scan",
     "security:nsp:scan": "nsp check",
     "security:snyk:scan": "snyk test"
   }
