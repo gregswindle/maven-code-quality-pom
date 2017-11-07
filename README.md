@@ -51,16 +51,16 @@ The purpose of the project is to use the Maven Site Plugin to:
 
   1. Fork or clone this repository.
 
-    ```bash
-    $ git clone https://github.com/gregswindle/spring-qa-dependencies.git
-    $ cd spring-qa-dependencies
-    ```
+  ```bash
+  $ git clone https://github.com/gregswindle/spring-qa-dependencies.git
+  $ cd spring-qa-dependencies
+  ```
 
   1. Install with Maven:
 
-    ```bash
-    $ mvn clean install
-    ```
+  ```bash
+  $ mvn clean install
+  ```
 
 ## 4. Configuration
 
@@ -99,67 +99,67 @@ This plugin has 9 goals:
 
 1. **`site:attach-descriptor`**
 
-  Adds the site descriptor (`site.xml`) to the list of files to be
-  installed/deployed.
+    Adds the site descriptor (`site.xml`) to the list of files to be
+    installed/deployed.
 
-  For Maven-2.x this is enabled by default only when the project has pom
-  packaging since it will be used by modules inheriting, but this can be enabled
-  for other projects packaging if needed.
+    For Maven-2.x this is enabled by default only when the project has pom
+    packaging since it will be used by modules inheriting, but this can be enabled
+    for other projects packaging if needed.
 
-  This default execution has been removed from the built-in lifecycle of Maven
-  3.x for pom-projects. Users that actually use those projects to provide a
-  common site descriptor for sub modules will need to explicitly define this
-  goal execution to restore the intended behavior.
+    This default execution has been removed from the built-in lifecycle of Maven
+    3.x for pom-projects. Users that actually use those projects to provide a
+    common site descriptor for sub modules will need to explicitly define this
+    goal execution to restore the intended behavior.
 
 2. **`site:deploy`**
 
-  Deploys the generated site using wagon supported protocols to the site URL
-  specified in the `<distributionManagement>` section of the POM.
-  For `scp` protocol, the website files are packaged by wagon into zip archive,
-  then the archive is transferred to the remote host, next it is un-archived
-  which is much faster than making a file by file copy.
+    Deploys the generated site using wagon supported protocols to the site URL
+    specified in the `<distributionManagement>` section of the POM.
+    For `scp` protocol, the website files are packaged by wagon into zip archive,
+    then the archive is transferred to the remote host, next it is un-archived
+    which is much faster than making a file by file copy.
 
 3. **`site:effective-site`**
 
-  Displays the effective site descriptor as an XML for this build, after
-  inheritance and interpolation of `site.xml`, for the first locale.
+    Displays the effective site descriptor as an XML for this build, after
+    inheritance and interpolation of `site.xml`, for the first locale.
 
 4. **`site:help`**
 
-  Display help information on maven-site-plugin.
-  Call `mvn site:help -Ddetail=true -Dgoal=<goal-name>` to display parameter
-  details.
+    Display help information on maven-site-plugin.
+    Call `mvn site:help -Ddetail=true -Dgoal=<goal-name>` to display parameter
+    details.
 
 5. **`site:jar`**
 
-  Bundles the site output into a JAR so that it can be deployed to a repository.
+    Bundles the site output into a JAR so that it can be deployed to a repository.
 
 6. **`site:run`**
 
-  Starts the site up, rendering documents as requested for faster editing. It
-  uses Jetty as the web server.
+    Starts the site up, rendering documents as requested for faster editing. It uses Jetty as the web server.
 
 7. **`site:site`**
 
-  Generates the site for a single project.
-  Note that links between module sites in a multi module build will not work,
-  since local build directory structure doesn't match deployed site.
+    Generates the site for a single project.
+
+    Note that links between module sites in a multi module build will not work,
+    since local build directory structure doesn't match deployed site.
 
 8. **`site:stage`**
 
-  Deploys the generated site to a local staging or mock directory based on the
-  site URL specified in the `<distributionManagement>` section of the POM.
-  It can be used to test that links between module sites in a multi-module build
-  work.
+    Deploys the generated site to a local staging or mock directory based on the
+    site URL specified in the `<distributionManagement>` section of the POM.
+    It can be used to test that links between module sites in a multi-module build
+    work.
 
-  This goal requires the site to already have been generated using the site
-  goal, such as by calling `mvn site`.
+    This goal requires the site to already have been generated using the site
+    goal, such as by calling `mvn site`.
 
 9. **`site:stage-deploy`**
 
-  Deploys the generated site to a staging or mock URL to the site URL specified
-  in the `<distributionManagement>` section of the POM, using wagon supported
-  protocols.
+    Deploys the generated site to a staging or mock URL to the site URL specified
+    in the `<distributionManagement>` section of the POM, using wagon supported
+    protocols.
 
 ## 6. Security
 
