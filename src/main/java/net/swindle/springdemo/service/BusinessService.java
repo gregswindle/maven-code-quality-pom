@@ -1,5 +1,6 @@
 package net.swindle.springdemo.service;
 
+@SuppressWarnings("PMD")
 public interface BusinessService {
 
   public String offerService(String companyName);
