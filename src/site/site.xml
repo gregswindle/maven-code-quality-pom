@@ -10,7 +10,7 @@
 	</skin>
 	<body>
 		<menu name="Overview">
-			<item name="About" href="index.html" />			
+			<item name="About" href="project-summary.html" />			
 		</menu>
 		<menu name="Quality Assurance Reports">
 			<item name="Checkstyle" href="checkstyle.html" title="Report on coding style conventions." />

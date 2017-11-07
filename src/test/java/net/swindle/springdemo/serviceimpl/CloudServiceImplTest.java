@@ -15,17 +15,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
 public class CloudServiceImplTest {
 
-	@Autowired
-	private ApplicationContext ctx;
+  @Autowired private ApplicationContext ctx;
 
-	@Autowired
-	private CloudServiceImpl cloudService;
+  @Autowired private CloudServiceImpl cloudService;
 
-	@Test
-	public void testOfferService() {
-		cloudService = (CloudServiceImpl) ctx.getBean("cloudService");
-		String statement = cloudService.offerService("CapitalOne");
-		assertThat(statement, containsString("CapitalOne"));
-	}
-
+  @Test
+  public void testOfferService() {
+    cloudService = (CloudServiceImpl) ctx.getBean("cloudService");
+    String statement = cloudService.offerService("CapitalOne");
+    assertThat(statement, containsString("CapitalOne"));
+  }
 }

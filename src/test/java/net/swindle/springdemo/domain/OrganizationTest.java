@@ -16,25 +16,22 @@ import net.swindle.springdemo.serviceimpl.CloudServiceImpl;
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
 public class OrganizationTest {
 
-	@Autowired
-	private ApplicationContext ctx;
+  @Autowired private ApplicationContext ctx;
 
-	@Autowired
-	private Organization myorg;
+  @Autowired private Organization myorg;
 
-	@SuppressWarnings("unused")
-	@Autowired
-	private CloudServiceImpl cloudService;
+  @SuppressWarnings("unused")
+  @Autowired
+  private CloudServiceImpl cloudService;
 
-	@Test
-	public void testContext() {
-		assertNotNull(ctx.getBean("myorg"));
-	}
+  @Test
+  public void testContext() {
+    assertNotNull(ctx.getBean("myorg"));
+  }
 
-	@Test
-	public void testCorporateService() {
-		assertNotNull(myorg.toString());
-		assertNotNull(myorg.corporateService());
-	}
-
+  @Test
+  public void testCorporateService() {
+    assertNotNull(myorg.toString());
+    assertNotNull(myorg.corporateService());
+  }
 }

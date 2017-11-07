@@ -17,30 +17,27 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
 public class AgencyRecruitmentServiceImplTest {
 
-	@Autowired
-	private ApplicationContext ctx;
+  @Autowired private ApplicationContext ctx;
 
-	@Autowired
-	private AgencyRecruitmentServiceImpl agency;
+  @Autowired private AgencyRecruitmentServiceImpl agency;
 
-	@Before
-	public void beforeEach() {
-		agency = (AgencyRecruitmentServiceImpl) ctx.getBean("agency");
-	}
+  @Before
+  public void beforeEach() {
+    agency = (AgencyRecruitmentServiceImpl) ctx.getBean("agency");
+  }
 
-	@Test
-	public void testAgencyRecruitmentServiceImpl() {
-		agency = (AgencyRecruitmentServiceImpl) ctx.getBean("agency");
-		assertNotNull(agency);
-	}
+  @Test
+  public void testAgencyRecruitmentServiceImpl() {
+    agency = (AgencyRecruitmentServiceImpl) ctx.getBean("agency");
+    assertNotNull(agency);
+  }
 
-	@Test
-	public void testRecruitEmployees() {
-		String companyName = "Verizon";
-		String departmentName = "HR";
-		String statement = agency.recruitEmployees(companyName, departmentName, 1);
-		assertThat(statement, containsString(companyName));
-		assertThat(statement, containsString(departmentName));
-	}
-
+  @Test
+  public void testRecruitEmployees() {
+    String companyName = "Verizon";
+    String departmentName = "HR";
+    String statement = agency.recruitEmployees(companyName, departmentName, 1);
+    assertThat(statement, containsString(companyName));
+    assertThat(statement, containsString(departmentName));
+  }
 }

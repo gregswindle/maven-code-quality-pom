@@ -14,25 +14,23 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @ContextConfiguration("file:src/main/resources/beans-cp.xml")
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
-public class DIConstructorAppTest {
+public class DiConstructorAppTest {
 
-	@Rule
-	public OutputCapture capture = new OutputCapture();
+  @Rule public OutputCapture capture = new OutputCapture();
 
-	@Test
-	public void testExistenceOfApp() {
-		assertNotNull(DIConstructorApp.class);
-		DIConstructorApp app = new DIConstructorApp();
-		assertNotNull(app);
-	}
+  @Test
+  public void testExistenceOfApp() {
+    assertNotNull(DiConstructorApp.class);
+    DiConstructorApp app = new DiConstructorApp();
+    assertNotNull(app);
+  }
 
-	@Test
-	public void testMain() {
-		String[] args = { null };
-		DIConstructorApp.main(args);
-		String output = capture.toString();
-		assertThat(output, containsString("To organize the worlds information"));
-		assertThat(output, containsString("Human Resource Department"));
-	}
-
+  @Test
+  public void testMain() {
+    String[] args = {null};
+    DiConstructorApp.main(args);
+    String output = capture.toString();
+    assertThat(output, containsString("To organize the worlds information"));
+    assertThat(output, containsString("Human Resource Department"));
+  }
 }

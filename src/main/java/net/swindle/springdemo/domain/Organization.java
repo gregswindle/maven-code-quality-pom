@@ -2,40 +2,54 @@ package net.swindle.springdemo.domain;
 
 import net.swindle.springdemo.service.BusinessService;
 
+/**
+ * Organizations.
+ *
+ * @author swindle
+ */
 public class Organization {
 
-	private String companyName;
-	private String slogan;
-	private BusinessService businessService;
+  private final String companyName;
+  private String slogan;
+  private BusinessService businessService;
 
-	public Organization(String companyName) {
-		this.companyName = companyName;
-	}
+  /**
+   * Constructor
+   *
+   * @param companyName
+   */
+  public Organization(String companyName) {
+    this.companyName = companyName;
+  }
 
-	public String getCompanyName() {
-		return companyName;
-	}
+  /** @return companyName */
+  public String getCompanyName() {
+    return companyName;
+  }
 
-	public void setPostalCode(String postalCode) {
-	}
+  /** @param postalCode */
+  public void setPostalCode(String postalCode) {}
 
-	public void setEmployeeCount(int employeeCount) {
-	}
+  /** @param employeeCount */
+  public void setEmployeeCount(int employeeCount) {}
 
-	public void setSlogan(String slogan) {
-		this.slogan = slogan;
-	}
+  /** @param slogan */
+  public void setSlogan(String slogan) {
+    this.slogan = slogan;
+  }
 
-	public void setBusinessService(BusinessService businessService) {
-		this.businessService = businessService;
-	}
+  /** @param businessService */
+  public void setBusinessService(BusinessService businessService) {
+    this.businessService = businessService;
+  }
 
-	public String corporateSlogan() {
-		return slogan;
-	}
+  /** @return */
+  public String corporateSlogan() {
+    return slogan;
+  }
 
-	public String corporateService() {
-		return businessService.offerService(companyName);
-	}
-
+  /** @return */
+  public String corporateService() {
+    return businessService.offerService(companyName);
+  }
 }
