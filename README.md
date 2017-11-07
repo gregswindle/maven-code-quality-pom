@@ -18,7 +18,8 @@
 - [5. Usage](#5-usage)
   * [5.1. Generate site files](#51-generate-site-files)
   * [5.2. Launch the site on a Jetty web server](#52-launch-the-site-on-a-jetty-web-server)
-  * [5.3. Goals for Apache Maven Site Plugin 3.6](#53-goals-for-apache-maven-site-plugin-36)
+  * [5.3. Export reports to SonarCloud.io](#53-export-reports-to-sonarcloudio)
+  * [5.4. Goals for Apache Maven Site Plugin 3.6](#54-goals-for-apache-maven-site-plugin-36)
 - [6. Security](#6-security)
 - [7. Semantic version and `CHANGELOG`](#7-semantic-version-and-changelog)
 - [8. Contributing to `spring-qa-dependencies`](#8-contributing-to-spring-qa-dependencies)
@@ -59,13 +60,18 @@ The purpose of the project is to use the Maven Site Plugin to:
   1. Install with Maven:
 
   ```bash
-  $ mvn clean install
+  $ mvn clean install -DskipTests=true -Dmaven.javadocs.skip=true -B -V
+  ```
+
+  1. Install Node.js dependencies:
+
+  ```bash
+  $ npm install
   ```
 
 ## 4. Configuration
 
 TBD.
-
 
 ## 5. Usage
 
@@ -79,7 +85,6 @@ $ mvn site
 
 Then open `spring-qa-dependencies/target/site/index.html` in a Web browser.
 
-
 ### 5.2. Launch the site on a Jetty web server
 
 Open a Terminal and run:
@@ -90,7 +95,21 @@ $ mvn site:run
 
 Then open http://localhost:8080 in a browser.
 
-### 5.3. Goals for Apache Maven Site Plugin 3.6
+### 5.3. Export reports to SonarCloud.io
+> :warning: You need
+>
+>  * An active account on https://sonarcloud.io
+>  * To set the `ENVIRONMENT` variable `$SONAR_TOKEN`
+>
+> [See "Using SonarCloud with Travis CI"](https://docs.travis-ci.com/user/sonarcloud) for details.
+
+Open a Terminal and run:
+
+```bash
+$ mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+```
+
+### 5.4. Goals for Apache Maven Site Plugin 3.6
 > :bulb: You can output these goals from a Terminal by running
 >
 > `mvn site:help`
