@@ -184,14 +184,14 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
-				<configuration>
-					<!-- (2) setup the argLine and run the unit tests. **NOTE the "jacocArgLine" 
+				<!-- <configuration>
+					(2) setup the argLine and run the unit tests. **NOTE the "jacocArgLine" 
 						property was configured the "prepare-agent" goal of Jacoco (see below). If 
 						you want to resolve the property value as late as possible (i.e. your dynamically 
 						alter this property value before reaching this phase), Maven gives you option 
-						to use @{jacocoArgLine} instead -->
+						to use @{jacocoArgLine} instead
 					<argLine>${jacocoArgLine} -Xmx256m</argLine>
-				</configuration>
+				</configuration> -->
 				<dependencies>
 					<dependency>
 						<groupId>org.junit.platform</groupId>
@@ -243,12 +243,12 @@
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
-						<configuration>
+						<!-- <configuration>
 							<propertyName>jacocoArgLine</propertyName>
 							<includes>
 								<include>${project.groupId}.springdemo.*</include>
-							</includes>
-						</configuration>
+							</includes> 
+						</configuration>-->
 					</execution>
 					<!-- (3) The check goal by default runs in the verify phase, we want 
 						to fail the build if minimum code coverage checks aren't met. -->
