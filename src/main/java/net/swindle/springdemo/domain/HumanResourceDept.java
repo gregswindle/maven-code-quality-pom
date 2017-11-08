@@ -14,7 +14,7 @@ public class HumanResourceDept implements Department {
   private final Organization organization;
 
   /**
-   * @param recruitmentService
+   * @param recruitmentService A company that links potential employees to businesses for hire.
    * @param organization
    */
   public HumanResourceDept(RecruitmentService recruitmentService, Organization organization) {
