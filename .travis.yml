@@ -19,8 +19,10 @@ jdk:
   - openjdk8
 
 script:
+  - mvn enforcer:display-info
   - mvn site
   - mvn checkstyle:check
+  - mvn duplicate-finder:check
   - mvn findbugs:check
   - mvn pmd:check
   - mvn pmd:cpd-check
