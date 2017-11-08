@@ -140,6 +140,7 @@ _book
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+*.iml
 
 # Gradle:
 .idea/**/gradle.xml

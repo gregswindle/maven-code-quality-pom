@@ -10,7 +10,7 @@
 	</skin>
 	<body>
 		<menu name="Overview">
-			<item name="About" href="project-summary.html" />			
+			<item name="About" href="project-summary.html" />
 		</menu>
 		<menu name="Quality Assurance Reports">
 			<item name="Checkstyle" href="checkstyle.html" title="Report on coding style conventions." />
@@ -19,7 +19,7 @@
 		</menu>
 		<menu name="Unit Test Reports">
 			<item name="Pass/Fail" href="surefire-report.html" title="Report on the test results of the project." />
-			<item name="Code Coverage" href="jacoco/index.html" />
+			<item name="Code Coverage" href="jacoco/index.html" target="_testWin" />
 		</menu>
 		<menu name="Dependency Reports">
 			<item name="Dependency Updates" href="dependency-updates-report.html" />
@@ -27,9 +27,9 @@
 			<item name="Property Updates" href="property-updates-report.html" />
 		</menu>
 		<menu name="Source Code">
-			<item name="Java" href="xref/index.html" />
-			<item name="JUnit" href="xref-test/index.html" />
+			<item name="Java" href="xref/index.html" target="_depWin" />
+			<item name="Specs/Tests" href="xref-test/index.html" target="_depWin" />
 		</menu>
-		<menu name="Product Documentation" ref="reports" />
+		<menu ref="reports" />
 	</body>
 </project>
