@@ -1,0 +1,36 @@
+---
+language: java
+sudo: false
+install: true
+
+addons:
+  sonarcloud:
+    organization:   "$SONAR_ORGANIZATION"
+    token:
+      secure:       "$SONAR_TOKEN"
+    # github_token:
+    #   secure:       "$GH_TOKEN"
+    branches:
+      - master
+      - /[build|chore|ci|docs|feat|fix|perf|refactor|revert|spike|style|test].*/
+
+jdk:
+  - oraclejdk8
+  - openjdk8
+
+script:
+  - mvn enforcer:display-info
+  - mvn site
+  - mvn checkstyle:check
+  - mvn duplicate-finder:check
+  - mvn findbugs:check
+  - mvn pmd:check
+  - mvn pmd:cpd-check
+
+after_script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'

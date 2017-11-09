@@ -13,12 +13,11 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration("file:src/main/resources/beans-cp.xml")
 public class EcommerceServiceImplTest {
 
-	@Autowired
-	private EcommerceServiceImpl ecommerceService;
+  @Autowired private EcommerceServiceImpl ecommerceService;
 
-	@Test
-	public void testOfferService() {
-		assertThat(ecommerceService.offerService("YoYoDyne"), containsString("As an Organization, YoYoDyne"));
-	}
-
+  @Test
+  public void testOfferService() {
+    assertThat(
+        ecommerceService.offerService("YoYoDyne"), containsString("As an Organization, YoYoDyne"));
+  }
 }

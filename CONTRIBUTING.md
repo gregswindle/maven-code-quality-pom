@@ -1,7 +1,7 @@
-# Contributing<br>to `spring-qa-dependencies`
+# Contributing<br>to `maven-code-quality-pom`
 > [![PRs Welcome][makeapullrequest-image]][makeapullrequest-url]
 >
-> Welcome to `spring-qa-dependencies`. You're among people eager to promote recommended community standards that encourage open source consumption and contributions with comprehensive `README`, `CODE_OF_CONDUCT`, `CONTRIBUTING`, and `LICENSE` documents. If you are curious, you're already a member!
+> Welcome to `maven-code-quality-pom`. You're among people eager to promote recommended community standards that encourage open source consumption and contributions with comprehensive `README`, `CODE_OF_CONDUCT`, `CONTRIBUTING`, and `LICENSE` documents. If you are curious, you're already a member!
 
 <dfn>__Contributions__ start with __community conversations__ that lead to __positive change.__</dfn> Open source provides a flexible collaboration model that facilitates change, even among perfect strangers. Contributions therefore:
 
@@ -70,7 +70,7 @@
 
 * __Collaboration starts with *Issues*. Changes happen through *Pull Requests*.__
 
-    View `spring-qa-dependencies's` collaboration and contribution flowcharts:
+    View `maven-code-quality-pom's` collaboration and contribution flowcharts:
 
   ---
 
@@ -95,7 +95,7 @@
 * ### 1.1. Create Issues for feature requests and defects.
 
     _Why:_
-    > ⌦ `spring-qa-dependencies` follows an issue-driven product delivery model.
+    > ⌦ `maven-code-quality-pom` follows an issue-driven product delivery model.
     > Before any work is done, create an Issue, first. This starts a
     > conversation about features, defects ("bugs"), refactoring, product
     > delivery improvements, etc.
@@ -309,12 +309,12 @@
 
 * ### 2.1. __Rules__
 
-  `spring-qa-dependencies` manages contributions with the  [feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
+  `maven-code-quality-pom` manages contributions with the  [feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow).
 
 * #### 2.1.1. Makes changes in a topic branch.
 
   _Why:_
-  > ⌦ Use an isolated topic branch for parallel product development. Topic branches allow you to submit multiple pull requests without confusion. You can iterate without polluting the master branch with potentially unstable, unfinished code. The `spring-qa-dependencies` team uses:
+  > ⌦ Use an isolated topic branch for parallel product development. Topic branches allow you to submit multiple pull requests without confusion. You can iterate without polluting the master branch with potentially unstable, unfinished code. The `maven-code-quality-pom` team uses:
   >
   > * [Feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#feature-branch-workflow) for small-ish codebases, or
   > * [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#gitflow-workflow) for large applications and monoliths
@@ -362,7 +362,7 @@
 * #### 2.1.3. Branch out from `master`.
 
     _Why:_
-    > ⌦ `spring-qa-dependencies` follows the feature-branch-workflow.
+    > ⌦ `maven-code-quality-pom` follows the feature-branch-workflow.
 
 * #### 2.1.4. __*Never*__ push into the `master` branch. __*Always*__ submit a Pull Request.
 
@@ -691,7 +691,7 @@
 
 * ### 3.1. Use the Standard JS Style.
 
-  `spring-qa-dependencies` follows the [Standard JS Style][standard-js-url].
+  `maven-code-quality-pom` follows the [Standard JS Style][standard-js-url].
 
 * ### 3.2. Use ESLint to analyze source code.
 
@@ -703,7 +703,7 @@
   ```
   >
 
-  View [`spring-qa-dependencies's` ESLint rules][eslint-rules-table-url] and their enforcement.
+  View [`maven-code-quality-pom's` ESLint rules][eslint-rules-table-url] and their enforcement.
 
 ## 4. __Unit testing__
 
@@ -731,7 +731,7 @@
     > jest --config=jest.config.json
 
       PASS  __tests__/app.js
-       spring-qa-dependencies:app
+       maven-code-quality-pom:app
         ✓ creates files (1ms)
 
     Test Suites: 1 passed, 1 total
@@ -760,14 +760,19 @@
 
 [![StackShare][stackshare-badge-image]][stackshare-url]
 
-`spring-qa-dependencies` requires the following tech stack to either run, build, test, or deploy:
+`maven-code-quality-pom` requires the following tech stack to either run, build, test, or deploy:
 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
 | **Dependency** | **Description** | **Version** | **License** | **Type** |
 | -------------- | --------------- | ----------- | ----------- | -------- |
- | [commitplease@2.7.10](https://github.com/jzaefferer/commitplease#readme) | Validates strings as commit messages | 2.7.10 | MIT | dev | 
+ | [commitplease@3.1.0](https://github.com/jzaefferer/commitplease#readme) | Validates strings as commit messages | 3.1.0 | MIT | dev | 
  | [fixpack@2.3.1](https://github.com/henrikjoreteg/fixpack) | cli tool that cleans up package.json files. | 2.3.1 | MIT | dev | 
- | [nsp@^2.6.3](https://github.com/nodesecurity/nsp#readme) | The Node Security (nodesecurity.io) command line interface | 2.8.1 | Apache-2.0 | dev | 
+ | [markdown-magic@0.1.19](https://github.com/DavidWells/markdown-magic#readme) | Automatically update markdown files with content from external sources | 0.1.19 | MIT | dev | 
+ | [markdown-magic-dependency-table@1.3.2](https://github.com/camacho/markdown-magic-dependency-table#readme) | Generate table of information about dependencies automatically in markdown | 1.3.2 | MIT | dev | 
+ | [markdown-magic-install-command@1.3.1](https://github.com/camacho/markdown-magic-install-command#readme) | Print install command for markdown file | 1.3.1 | MIT | dev | 
+ | [markdown-magic-package-scripts@1.2.1](https://github.com/camacho/markdown-magic-package-scripts#readme) | Print list of scripts in package.json with descriptions | 1.2.1 | MIT | dev | 
+ | [nsp@3.1.0](https://github.com/nodesecurity/nsp#readme) | The Node Security (nodesecurity.io) command line interface | 3.1.0 | Apache-2.0 | dev | 
+ | [snyk@1.48.1](https://github.com/snyk/snyk#readme) | snyk library and cli utility | 1.48.1 | Apache-2.0 | dev | 
  | [standard-version@4.2.0](https://github.com/conventional-changelog/standard-version#readme) | replacement for `npm version` with automatic CHANGELOG generation | 4.2.0 | ISC | dev | 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
 <!-- AUTO-GENERATED-CONTENT:END -->
@@ -1071,7 +1076,7 @@
 [autosquashing-git-commits-url]: https://robots.thoughtbot.com/autosquashing-git-commits
 [changelog-url]: ./CHANGELOG.md
 [cite-interview-torvalds-url]: https://techcrunch.com/2012/04/19/an-interview-with-millenium-technology-prize-finalist-linus-torvalds/
-[cla-url]: https://www.clahub.com/agreements/gregswindle/spring-qa-dependencies
+[cla-url]: https://www.clahub.com/agreements/gregswindle/maven-code-quality-pom
 [code-of-conduct-url]: ./CODE_OF_CONDUCT.md
 [commitplease-url]: https://www.npmjs.com/package/commitplease
 [gregswindle-palette-image]: ./docs/img/palette.svg
@@ -1097,9 +1102,9 @@
 [icon-issue-image]: ./docs/img/icons8/icon-issues.png
 [icon-pr-image]: ./docs/img/icons8/icon-pr.png
 [icon-rest-api-image]: ./docs/img/icons8/icon-rest-api.png
-[issues-new-defect-url]: https://github.com/gregswindle/spring-qa-dependencies/issues/new?title=fix%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Defect&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
-[issues-new-feat-url]: https://github.com/gregswindle/spring-qa-dependencies/issues/new?title=feat%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Feature&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
-[issues-url]: https://github.com/gregswindle/spring-qa-dependencies/issues
+[issues-new-defect-url]: https://github.com/gregswindle/maven-code-quality-pom/issues/new?title=fix%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Defect&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
+[issues-new-feat-url]: https://github.com/gregswindle/maven-code-quality-pom/issues/new?title=feat%28affected-scope%29%3A+subject-line-with-very-few-words&labels=Priority%3A+Medium%2CStatus%3A+Review+Needed%2CType%3A+Feature&body=%2A%2A%F0%9F%92%A1+TIP%3A%2A%2A+Select+the+%E2%86%96%EF%B8%8E%E2%8E%BE+Preview+%E2%8F%8B+Tab+above+help+read+these+instructions.%0D%0A%0D%0A%23%23+1.+Issue+type%0D%0A%3E%E2%8C%A6+Type+the+letter+%22x%22+in+the+%22checkbox%22+the+best+describe+this+issue.%0D%0A%0D%0A-+%5Bx%5D+__Feature%3A__+I%27m+requesting+a+product+enhancement.%0D%0A%0D%0A%23%23+2.+User+story+summary%0D%0A%3E%E2%8C%A6+Describe+what+you+want+to+accomplish%2C+in+what+role%2Fcapacity%2C+and+why+it%27s+important+to+you.%0D%0A%0D%0A%3E+__EXAMPLE%3A__%0D%0A%3E+As+a+Applicant%2C%0D%0A%3E+I+want+to+submit+my+resume%0D%0A%3E+In+order+to+be+considered+for+a+job+opening.%0D%0A%0D%0AAs+a+%7Brole%7D%2C%0D%0AI+must%2Fneed%2Fwant%2Fshould+%7Bdo+something%7D%0D%0AIn+order+to+%7Bachieve+value%7D.%0D%0A%0D%0A%23%23+3.+Acceptance+criteria%0D%0A%3E%E2%8C%A6+Replace+the+examples+below+with+your+own+imperative%2C+%22true%2Ffalse%22+statements+for+the+__behavior+you+expect__+to+see%2C+or+the+behavior+that+__would__+be+true+if+there+were+no+errors+%28for+defects%29.%0D%0A%0D%0A-+%5B+%5D+1.+Job+Applicants+receive+a+confirmation+email+after+they+submit+their+resumes.%0D%0A-+%5B+%5D+2.+An+Applicant%27s+resume+information+isn%27t+lost+when+errors+occur.%0D%0A-+%5B+%5D+3.+%7Bcriterion-three%7D%0D%0A-+%5B+%5D+4.+%7Bcriterion-four%7D%0D%0A%0D%0A%3C%21--+%E2%9B%94%EF%B8%8F++Do+not+remove+anything+below+this+comment.+%E2%9B%94%EF%B8%8F++--%3E%0D%0A%5Bicon-info-image%5D%3A+..%2Fdocs%2Fimg%2Ficons8%2Ficon-info-50.png%0D%0A
+[issues-url]: https://github.com/gregswindle/maven-code-quality-pom/issues
 [jest-logo-image]: ./docs/img/logo-jest.png
 [jest-url]: https://facebook.github.io/jest/
 [license-url]: ./LICENSE
@@ -1111,7 +1116,7 @@
 [product-repo-logo-image]: ./docs/img/logo-commonalaxy.png
 [product-repo-url]: .
 [stackshare-badge-image]: https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat-square
-[stackshare-url]: https://stackshare.io/gregswindle/spring-qa-dependencies
+[stackshare-url]: https://stackshare.io/gregswindle/maven-code-quality-pom
 [standard-js-badge-image]: https://cdn.rawgit.com/standard/standard/master/badge.svg
 [standard-js-url]: https://github.com/standard/standard
 [standard-version-url]: https://github.com/conventional-changelog/standard-version
