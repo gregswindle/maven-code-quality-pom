@@ -1,4 +1,6 @@
 # `maven-code-quality-pom`
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/gregswindle/maven-code-quality-pom.svg)](https://greenkeeper.io/)
 > Enforce and report code quality with JUnit, JaCoCo, Hamcrest, FindBugs, PMD, CodeNarc, Checkstyle (Google), Enforcer, Duplicate-Finder, JDepend, and more with this Maven POM.
 
 [![License][license-badge-image]][license-url]
