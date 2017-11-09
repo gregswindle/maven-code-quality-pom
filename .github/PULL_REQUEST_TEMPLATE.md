@@ -48,8 +48,8 @@ replace this line and the following task completion line._
 
 [checkstyle-google-url]: http://checkstyle.sourceforge.net/google_style.html
 [checkstyle-image]: ../docs/img/icon-checkstyle.png
-[coveralls-img]: https://coveralls.io/repos/github/gregswindle/spring-qa-dependencies/badge.svg
-[coveralls-url]: https://coveralls.io/github/gregswindle/spring-qa-dependencies
+[coveralls-img]: https://coveralls.io/repos/github/gregswindle/maven-code-quality-pom/badge.svg
+[coveralls-url]: https://coveralls.io/github/gregswindle/maven-code-quality-pom
 [sonar-code-smells-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=code_smells
 [sonar-code-smells-url]: https://sonarcloud.io/component_measures/metric/code_smells/list?id=gregswindle-github&metric=code_smells
 [sonar-cognitive-img]: http://sonarcloud.io/api/badges/measure?key=gregswindle-github&metric=cognitive_complexity

@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/DECORATION/1.7.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd"
-	name="spring-qa-dependencies">
+	name="maven-code-quality-pom">
 	<skin>
 		<groupId>org.apache.maven.skins</groupId>
 		<artifactId>maven-fluido-skin</artifactId>

@@ -1,13 +1,13 @@
 {
-  "name": "spring-qa-dependencies",
-  "description": "A spike Spring solution for providing Maven POMs with quality assurance features.",
+  "name": "maven-code-quality-pom",
+  "description": "Enforce and report code quality with JUnit, JaCoCo, Hamcrest, FindBugs, PMD, CodeNarc, Checkstyle (Google), Enforcer, Duplicate-Finder, JDepend, and more with this Maven POM.",
   "version": "0.0.1-SNAPSHOT",
   "author": {
     "name": "Greg Swindle",
     "email": "greg@swindle.net",
     "url": "https://github.com/gregswindle"
   },
-  "bugs": "https://github.com/gregswindle/spring-qa-dependencies/issues",
+  "bugs": "https://github.com/gregswindle/maven-code-quality-pom/issues",
   "commitplease": {
     "style": "angular",
     "types": [
@@ -38,7 +38,7 @@
     "snyk": "1.48.1",
     "standard-version": "4.2.0"
   },
-  "homepage": "https://github.com/gregswindle/spring-qa-dependencies",
+  "homepage": "https://github.com/gregswindle/maven-code-quality-pom",
   "keywords": [
     "maven",
     "mvn",
@@ -48,7 +48,7 @@
   ],
   "license": "MIT",
   "maintainers": [],
-  "repository": "https://github.com/gregswindle/spring-qa-dependencies.git",
+  "repository": "https://github.com/gregswindle/maven-code-quality-pom.git",
   "scripts": {
     "docs": "md-magic --path '{.github/*.md,**/*.md}' '**/*.md' --ignore 'node_modules' --config ./markdown.config.js",
     "docs:toc": "md-magic --path '**/*.md' --ignore 'node_modules'",

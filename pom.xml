@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<description><![CDATA[<code>spring-qa-dependencies</code> is a spike Spring solution for providing Maven POMs with quality assurance features.<h3>Purpose</h3><p>The purpose of the project is to use the Maven Site Plugin to:</p><ol><li> Use the Maven Site Plugin to generate meaningful test and quality reporting artifacts</li><li> Enforce test coverage thresholds and code standards</li><li> Prevent source code that does not conform to standards from being merged into <code>master</code>.</li></ol>]]></description>
+	<description><![CDATA[<h2>Code quality enforcement and reporting</h3><p><strong>Enforce and report code quality with JUnit, JaCoCo, Hamcrest, FindBugs, PMD, CodeNarc, Checkstyle (Google), Enforcer, Duplicate-Finder, JDepend, and more with this Maven POM.</strong></p><p><code>maven-code-quality-pom</code> is a spike Spring solution for providing Maven POMs with quality assurance features.</p><h3>Purpose</h3><p>The purpose of the project is to use the Maven Site Plugin to:</p><ol><li> Use the Maven Site Plugin to generate meaningful test and quality reporting artifacts</li><li> Enforce test coverage thresholds and code standards</li><li> Prevent source code that does not conform to standards from being merged into <code>master</code>.</li></ol>]]></description>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.swindle</groupId>
-	<artifactId>spring-qa-dependencies</artifactId>
+	<artifactId>maven-code-quality-pom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring-qa-dependencies</name>
+	<name>maven-code-quality-pom</name>
 	<inceptionYear>2017</inceptionYear>
-	
-	<url>https://github.com/gregswindle/spring-qa-dependencies</url>
+
+	<url>https://github.com/gregswindle/maven-code-quality-pom</url>
 	<organization>
 		<name>gregswindle</name>
 		<url>https://github.com/gregswindle</url>
@@ -24,9 +24,9 @@
 		</developer>
 	</developers>
 	<scm>
-		<url>https://github.com/gregswindle/spring-qa-dependencies</url>
-		<connection>scm:git:https://github.com/gregswindle/spring-qa-dependencies</connection>
-		<developerConnection>scm:git:https://github.com/gregswindle/spring-qa-dependencies</developerConnection>
+		<url>https://github.com/gregswindle/maven-code-quality-pom</url>
+		<connection>scm:git:https://github.com/gregswindle/maven-code-quality-pom</connection>
+		<developerConnection>scm:git:https://github.com/gregswindle/maven-code-quality-pom</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<licenses>
@@ -41,18 +41,22 @@
 	</issueManagement>
 	<ciManagement>
 		<system>travis-ci</system>
-		<url>https://travis-ci.org/gregswindle/spring-qa-dependencies</url>
+		<url>https://travis-ci.org/gregswindle/maven-code-quality-pom</url>
 	</ciManagement>
 	<properties>
 		<checkstyle.version>8.4</checkstyle.version>
 		<jdk.version>1.8</jdk.version>
 		<maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
+		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+		<maven.dependency.plugin.version>2.10</maven.dependency.plugin.version>
 		<maven.pmd.plugin.version>3.8</maven.pmd.plugin.version>
+		<maven.resources.plugin.version>2.6</maven.resources.plugin.version>
 		<maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sonar.property.login>${env.SONAR_TOKEN}</sonar.property.login>
 		<sonar.property.organization>${env.SONAR_ORGANIZATION}</sonar.property.organization>
+		<spring.boot.maven.plugin.version>1.5.4.RELEASE</spring.boot.maven.plugin.version>
 		<versioneye.apiKey>${env.VERSIONEYE_API_KEY}</versioneye.apiKey>
 		<versioneye.organization>gregswindle_orga</versioneye.organization>
 	</properties>
@@ -173,7 +177,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
+				<version>${maven.compiler.plugin.version}</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
@@ -184,18 +188,18 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.4</version>
 			</plugin>
-			<!-- JaCoCo (0) Code coverage configuration. Order of execution is: (1) 
-				Prepare agent is run to configure the property, then (2) Unit tests are run, 
+			<!-- JaCoCo (0) Code coverage configuration. Order of execution is: (1)
+				Prepare agent is run to configure the property, then (2) Unit tests are run,
 				then (3) Run jacoco's check goal to determine code coverage. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
 				<configuration>
-					<!-- JaCoCo (2) Setup the argLine and run the unit tests. **NOTE the 
-						"jacocArgLine" property was configured the "prepare-agent" goal of Jacoco 
-						(see below). If you want to resolve the property value as late as possible 
-						(i.e. your dynamically alter this property value before reaching this phase), 
+					<!-- JaCoCo (2) Setup the argLine and run the unit tests. **NOTE the
+						"jacocArgLine" property was configured the "prepare-agent" goal of Jacoco
+						(see below). If you want to resolve the property value as late as possible
+						(i.e. your dynamically alter this property value before reaching this phase),
 						Maven gives you option to use @{jacocoArgLine} instead -->
 					<argLine>${jacocoArgLine} -Xmx256m</argLine>
 				</configuration>
@@ -242,8 +246,8 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.9</version>
 				<executions>
-					<!-- JaCoCo (1) Prepare agent runs in the init phase, it setups the 
-						jacocoProperty, so we can insert this to the maven sure fire argLine and 
+					<!-- JaCoCo (1) Prepare agent runs in the init phase, it setups the
+						jacocoProperty, so we can insert this to the maven sure fire argLine and
 						get to run jacoco as agent. -->
 					<execution>
 						<id>prepare-agent</id>
@@ -257,7 +261,7 @@
 							</includes>
 						</configuration>
 					</execution>
-					<!-- JaCoCo (3) The check goal by default runs in the verify phase, 
+					<!-- JaCoCo (3) The check goal by default runs in the verify phase,
 						we want to fail the build if minimum code coverage checks aren't met. -->
 					<execution>
 						<id>check</id>
@@ -266,7 +270,7 @@
 						</goals>
 						<configuration>
 							<rules>
-								<!-- All classes must have 90% line and branch coverage. Note we 
+								<!-- All classes must have 90% line and branch coverage. Note we
 									use 2 d.p so that we get can any check failure messages reported to 2 d.p. -->
 								<rule>
 									<element>BUNDLE</element>
@@ -323,7 +327,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>1.5.8.RELEASE</version>
+				<version>${spring.boot.maven.plugin.version}</version>
 				<executions>
 					<execution>
 						<goals>
@@ -383,7 +387,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.2</version>
+				<version>${maven.dependency.plugin.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -476,7 +480,7 @@
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
 				<configuration>
-				  
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -532,7 +536,7 @@
       </plugin><plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.2</version>
+				<version>${maven.dependency.plugin.version}</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -580,11 +584,11 @@
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>3.0.0-M1</version>
       </plugin>
-			
-			
-			
-			
-			
+
+
+
+
+
 		</plugins>
 	</reporting>
 </project>

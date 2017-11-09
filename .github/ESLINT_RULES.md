@@ -2,7 +2,7 @@
 
 # `ESLint` rules
 
-`spring-qa-dependencies` enforces the following code standards with `ESLint`.
+`maven-code-quality-pom` enforces the following code standards with `ESLint`.
 
 ## Table of contents
 

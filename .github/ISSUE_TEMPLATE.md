@@ -42,7 +42,7 @@ In order to {achieve value}.
 ##   🐞  5. Your environment (for defects only)
 > ⌦ Include as many relevant details about the environment in which the defect occured.
 
-* Version of `spring-qa-dependencies`:
+* Version of `maven-code-quality-pom`:
 * Environment name and version (e.g. Chrome 39, node.js 5.4):
 * Operating System and version (desktop or mobile):
 * Link to your project:

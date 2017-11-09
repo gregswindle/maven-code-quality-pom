@@ -19,9 +19,9 @@ under the License.
 -->
 <rss version="0.91">
   <channel>
-    <title>spring-qa-dependencies - Checkstyle report</title>
-    <link>https://github.com/gregswindle/spring-qa-dependencies</link>
-    <description>spring-qa-dependencies - Checkstyle report</description>
+    <title>maven-code-quality-pom - Checkstyle report</title>
+    <link>https://github.com/gregswindle/maven-code-quality-pom</link>
+    <description>maven-code-quality-pom - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2017 gregswindle</copyright>
     <item>
@@ -30,9 +30,9 @@ under the License.
              Warnings: 38,
              Infos: 0
       </title>
-            <link>https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html</link>
+            <link>https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html</link>
       <description>
-        <p>Click <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.DiConstructorApp.java">net/swindle/springdemo/DiConstructorApp.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.DiConstructorApp.java">net/swindle/springdemo/DiConstructorApp.java</a>
                 </td>
                 <td>
                   0
@@ -60,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.serviceimpl.AgencyRecruitmentServiceImpl.java">net/swindle/springdemo/serviceimpl/AgencyRecruitmentServiceImpl.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.serviceimpl.AgencyRecruitmentServiceImpl.java">net/swindle/springdemo/serviceimpl/AgencyRecruitmentServiceImpl.java</a>
                 </td>
                 <td>
                   0
@@ -74,7 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.package-info.java">net/swindle/springdemo/package-info.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.package-info.java">net/swindle/springdemo/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -88,7 +88,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.serviceimpl.package-info.java">net/swindle/springdemo/serviceimpl/package-info.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.serviceimpl.package-info.java">net/swindle/springdemo/serviceimpl/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -102,7 +102,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.service.package-info.java">net/swindle/springdemo/service/package-info.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.service.package-info.java">net/swindle/springdemo/service/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -116,7 +116,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.domain.Organization.java">net/swindle/springdemo/domain/Organization.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.domain.Organization.java">net/swindle/springdemo/domain/Organization.java</a>
                 </td>
                 <td>
                   0
@@ -130,7 +130,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.domain.package-info.java">net/swindle/springdemo/domain/package-info.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.domain.package-info.java">net/swindle/springdemo/domain/package-info.java</a>
                 </td>
                 <td>
                   0
@@ -144,7 +144,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.service.BusinessService.java">net/swindle/springdemo/service/BusinessService.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.service.BusinessService.java">net/swindle/springdemo/service/BusinessService.java</a>
                 </td>
                 <td>
                   0
@@ -158,7 +158,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.serviceimpl.CloudServiceImpl.java">net/swindle/springdemo/serviceimpl/CloudServiceImpl.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.serviceimpl.CloudServiceImpl.java">net/swindle/springdemo/serviceimpl/CloudServiceImpl.java</a>
                 </td>
                 <td>
                   0
@@ -172,7 +172,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.domain.Department.java">net/swindle/springdemo/domain/Department.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.domain.Department.java">net/swindle/springdemo/domain/Department.java</a>
                 </td>
                 <td>
                   0
@@ -186,7 +186,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.service.RecruitmentService.java">net/swindle/springdemo/service/RecruitmentService.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.service.RecruitmentService.java">net/swindle/springdemo/service/RecruitmentService.java</a>
                 </td>
                 <td>
                   0
@@ -200,7 +200,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.serviceimpl.EcommerceServiceImpl.java">net/swindle/springdemo/serviceimpl/EcommerceServiceImpl.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.serviceimpl.EcommerceServiceImpl.java">net/swindle/springdemo/serviceimpl/EcommerceServiceImpl.java</a>
                 </td>
                 <td>
                   0
@@ -214,7 +214,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.serviceimpl.ReferralRecruitmentServiceImpl.java">net/swindle/springdemo/serviceimpl/ReferralRecruitmentServiceImpl.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.serviceimpl.ReferralRecruitmentServiceImpl.java">net/swindle/springdemo/serviceimpl/ReferralRecruitmentServiceImpl.java</a>
                 </td>
                 <td>
                   0
@@ -228,7 +228,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/gregswindle/spring-qa-dependencies/checkstyle.html#net.swindle.springdemo.domain.HumanResourceDept.java">net/swindle/springdemo/domain/HumanResourceDept.java</a>
+                  <a href="https://github.com/gregswindle/maven-code-quality-pom/checkstyle.html#net.swindle.springdemo.domain.HumanResourceDept.java">net/swindle/springdemo/domain/HumanResourceDept.java</a>
                 </td>
                 <td>
                   0
