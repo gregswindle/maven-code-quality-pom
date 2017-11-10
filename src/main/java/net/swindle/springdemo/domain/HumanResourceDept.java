@@ -32,9 +32,7 @@ public class HumanResourceDept implements Department {
    */
   @Override
   public String hiringStatus(int numberOfRecruitments) {
-    final String hiringFacts =
-        recruitmentService.recruitEmployees(
-            organization.getCompanyName(), deptName, numberOfRecruitments);
-    return hiringFacts;
+    return recruitmentService.recruitEmployees(
+        organization.getCompanyName(), deptName, numberOfRecruitments);
   }
 }

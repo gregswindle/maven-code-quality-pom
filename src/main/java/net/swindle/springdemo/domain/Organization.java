@@ -2,6 +2,8 @@ package net.swindle.springdemo.domain;
 
 import net.swindle.springdemo.service.BusinessService;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Organizations.
  *
@@ -14,41 +16,71 @@ public class Organization {
   private BusinessService businessService;
 
   /**
-   * Constructor
+   * Constructor method.
    *
-   * @param companyName
+   * @param companyName The company name
    */
   public Organization(String companyName) {
     this.companyName = companyName;
   }
 
-  /** @return companyName */
+  /**
+   * Access company name.
+   *
+   * @return companyName The company name
+   */
   public String getCompanyName() {
     return companyName;
   }
 
-  /** @param postalCode */
+  /**
+   * Provide for Spring Bean mutation.
+   *
+   * @param postalCode The postal/regional code.
+   */
+  @Autowired(required = false)
   public void setPostalCode(String postalCode) {}
 
-  /** @param employeeCount */
+  /**
+   * Provide for Spring Bean mutation.
+   *
+   * @param employeeCount The number of people employeed in the company.
+   */
+  @Autowired(required = false)
   public void setEmployeeCount(int employeeCount) {}
 
-  /** @param slogan */
+  /**
+   * Modify the company slogan.
+   *
+   * @param slogan The company's slogan.
+   */
   public void setSlogan(String slogan) {
     this.slogan = slogan;
   }
 
-  /** @param businessService */
+  /**
+   * Provide for Spring Bean mutation.
+   *
+   * @param businessService Reference to outsourced service-provider.
+   */
   public void setBusinessService(BusinessService businessService) {
     this.businessService = businessService;
   }
 
-  /** @return */
+  /**
+   * Announce the company's slogan.
+   *
+   * @return The company slogan.
+   */
   public String corporateSlogan() {
     return slogan;
   }
 
-  /** @return */
+  /**
+   * Announce services provided.
+   *
+   * @return Statement of services offered
+   */
   public String corporateService() {
     return businessService.offerService(companyName);
   }

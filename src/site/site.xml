@@ -10,15 +10,8 @@
 	</skin>
 	<body>
 
-		<menu name="Overview">
-			<item name="About" href="index.html"></item>
-			<item name="Project Summary" href="project-summary.html"></item>
-			<item name="License" href="license.html"></item>
-			<item name="Source Code Management" href="source-repository.html"></item>
-		</menu>
-
 		<menu name="Code Quality Reports">
-			<item name="Unit Tests" href="surefire-report.html" collapse="true">
+			<item name="Unit Tests" href="surefire-report.html">
 				<item name="Code Coverage (JaCoCo)" href="jacoco/index.html" />
 				<item name="Results (Surefire)" href="surefire-report.html"
 					title="Report on the test results of the project." />
@@ -26,7 +19,7 @@
 				<item name="Unit Test Source Code" href="xref-test/index.html" />
 			</item>
 
-			<item name="Coding Standards" href="checkstyle.html" collapse="true">
+			<item name="Coding Standards" href="checkstyle.html">
 				<item name="Checkstyle" href="checkstyle.html"
 					title="Report on coding style conventions." />
 				<item name="CPD" href="cpd.html" title="Duplicate code detection." />
@@ -60,7 +53,7 @@
 				</item>
 			</item>
 
-			<item name="Source Code" href="xref/index.html" collapse="true">
+			<item name="Source Code" href="xref/index.html">
 				<item name="Java" href="xref/index.html" />
 				<item name="Javadocs" href="apidocs/index.html" />
 			</item>
@@ -80,23 +73,12 @@
 
 		<menu ref="reports" />
 
-
-		<menu name="Maven Resources">
-			<item name="Getting Started"
-				href="http://maven.apache.org/guides/getting-started/index.html"
-				target="_mavenWin" />
-			<item name="Maven project descriptor (XML)"
-				href="http://maven.apache.org/ref/3.5.2/maven-model/maven.html"
-				target="_mavenWin" />
-			<item name="Running Maven" href="http://maven.apache.org/run-maven/index.html"
-				target="_mavenWin" />
-			<item name="Settings Reference" href="http://maven.apache.org/settings.html"
-				target="_mavenWin" />
-			<item name="POM (Project Object Model) Reference" href="http://maven.apache.org/pom.html"
-				target="_mavenWin" />
-			<item name="Security" href="http://maven.apache.org/security.html"
-				target="_mavenWin" />
-		</menu>
-
 	</body>
+
+  <custom>
+    <fluidoSkin>
+      <googleSearch/>
+      <sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+    </fluidoSkin>
+  </custom>
 </project>

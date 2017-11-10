@@ -15,9 +15,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
 public class CloudServiceImplTest {
 
-  @Autowired private ApplicationContext ctx;
-
   @Autowired private CloudServiceImpl cloudService;
+
+  @Autowired private ApplicationContext ctx;
 
   @Test
   public void testOfferService() {

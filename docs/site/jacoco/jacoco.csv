@@ -1,8 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-maven-code-quality-pom,net.swindle.springdemo.domain,HumanResourceDept,0,25,0,0,0,10,0,3,0,3
+maven-code-quality-pom,net.swindle.springdemo.domain,HumanResourceDept,0,23,0,0,0,8,0,3,0,3
 maven-code-quality-pom,net.swindle.springdemo.domain,Organization,0,28,0,0,0,12,0,8,0,8
 maven-code-quality-pom,net.swindle.springdemo,DiConstructorApp,0,31,0,0,0,8,0,2,0,2
-maven-code-quality-pom,net.swindle.springdemo.serviceimpl,AgencyRecruitmentServiceImpl,0,30,0,0,0,5,0,2,0,2
-maven-code-quality-pom,net.swindle.springdemo.serviceimpl,ReferralRecruitmentServiceImpl,0,30,0,0,0,5,0,2,0,2
-maven-code-quality-pom,net.swindle.springdemo.serviceimpl,CloudServiceImpl,0,26,0,0,0,5,0,2,0,2
-maven-code-quality-pom,net.swindle.springdemo.serviceimpl,EcommerceServiceImpl,0,26,0,0,0,5,0,2,0,2
+maven-code-quality-pom,net.swindle.springdemo.serviceimpl,AgencyRecruitmentServiceImpl,0,28,0,0,0,4,0,2,0,2
+maven-code-quality-pom,net.swindle.springdemo.serviceimpl,ReferralRecruitmentServiceImpl,0,28,0,0,0,4,0,2,0,2
+maven-code-quality-pom,net.swindle.springdemo.serviceimpl,CloudServiceImpl,0,24,0,0,0,4,0,2,0,2
+maven-code-quality-pom,net.swindle.springdemo.serviceimpl,EcommerceServiceImpl,0,24,0,0,0,4,0,2,0,2

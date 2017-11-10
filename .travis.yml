@@ -18,17 +18,23 @@ jdk:
   - oraclejdk8
   - openjdk8
 
+env:
+  - NODE_VERSION="8"
+
+before_install:
+  - nvm install $NODE_VERSION
+  - node --version
+  - chmod +x src/scripts/site2md.sh
+
+install:
+  - npm install
+
 script:
-  - mvn enforcer:display-info
-  - mvn site
-  - mvn checkstyle:check
-  - mvn duplicate-finder:check
-  - mvn findbugs:check
-  - mvn pmd:check
-  - mvn pmd:cpd-check
+  - npm run docs && ./src/scripts/site2md.sh
+  - mvn enforcer:display-info checkstyle:check duplicate-finder:check findbugs:check pmd:check pmd:cpd-check package dependency:analyze
 
 after_script:
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar coveralls:report
 
 cache:
   directories:

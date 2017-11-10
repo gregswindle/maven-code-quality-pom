@@ -17,9 +17,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
 public class AgencyRecruitmentServiceImplTest {
 
-  @Autowired private ApplicationContext ctx;
-
   @Autowired private AgencyRecruitmentServiceImpl agency;
+
+  @Autowired private ApplicationContext ctx;
 
   @Before
   public void beforeEach() {
