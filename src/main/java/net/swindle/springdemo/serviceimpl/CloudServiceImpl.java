@@ -6,16 +6,17 @@ import net.swindle.springdemo.service.BusinessService;
 
 public class CloudServiceImpl implements BusinessService {
 
+  /* (non-Javadoc)
+   * @see net.swindle.springdemo.service.BusinessService#offerService(java.lang.String)
+   */
   @Override
   public String offerService(String companyName) {
-    Random random = new Random();
-    String service =
-        "\nAs an Organization, "
-            + companyName
-            + " offers world class Cloud computing infrastructure."
-            + "\nThe annual income exceeds "
-            + random.nextInt(revenue)
-            + " dollars.";
-    return service;
+    final Random random = new Random();
+    return "\nAs an Organization, "
+        + companyName
+        + " offers world class Cloud computing infrastructure."
+        + "\nThe annual income exceeds "
+        + random.nextInt(revenue)
+        + " dollars.";
   }
 }
