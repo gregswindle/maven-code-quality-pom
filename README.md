@@ -64,7 +64,8 @@ The **purpose of the project** is to use the Maven Site Plugin to:
 
 ## 2. Prerequisite software
 
-[![Java logo](./docs/img/icon-java-logo.png)][java-jdk-dl-url]
+[![Java logo](./docs/img/icon-java-logo.png)][![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom?ref=badge_shield)
+[java-jdk-dl-url]
 [![Maven logo](./docs/img/icon-maven-logo.png)][maven-url]
 [![Node.js logo](./docs/img/icons8/icon-nodejs-96.png)][nodejs-url]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![npm logo][npm-logo]][npmjs-url]
@@ -254,3 +255,6 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
 [travis-url]: https://travis-ci.org/gregswindle/maven-code-quality-pom
 [versioneye-badge-image]: https://www.versioneye.com/user/projects/5a012f2f2de28c58f8c7a10f/badge.svg?style=flat-square
 [versioneye-url]: https://www.versioneye.com/user/projects/5a012f2f2de28c58f8c7a10f
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom?ref=badge_large)
