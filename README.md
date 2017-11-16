@@ -255,3 +255,6 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
 [travis-url]: https://travis-ci.org/gregswindle/maven-code-quality-pom
 [versioneye-badge-image]: https://www.versioneye.com/user/projects/5a012f2f2de28c58f8c7a10f/badge.svg?style=flat-square
 [versioneye-url]: https://www.versioneye.com/user/projects/5a012f2f2de28c58f8c7a10f
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom?ref=badge_large)
