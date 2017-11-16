@@ -1,7 +1,7 @@
 # `maven-code-quality-pom`
 > Enforce and report code quality with JUnit, JaCoCo, Hamcrest, FindBugs, PMD, CodeNarc, Checkstyle (Google), Enforcer, Duplicate-Finder, JDepend, and more with this Maven POM.
 
-[![MIT License][license-badge-image]][license-url]
+[![License][license-badge-image]][license-url]
 [![Third-party licenses][fossa-shield-badge]][fossa-shield-url]
 [![Synk Vulnerabilities][snyk-vulnerabilities-badge-image]][snyk-vulnerabilities-url]
 [![Build Status][travis-image]][travis-url]
@@ -9,6 +9,7 @@
 [![Dependency Status][dependencyci-badge-image]][dependencyci-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/gregswindle/maven-code-quality-pom.svg?style=flat-square)](https://greenkeeper.io/)
 
 ## Table of contents
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (TOC:excludeText=Table of contents) -->
@@ -64,7 +65,7 @@ The **purpose of the project** is to use the Maven Site Plugin to:
 
 ## 2. Prerequisite software
 
-[![Java logo](./docs/img/icon-java-logo.png)][java-jdk-dl-url]
+[![Java logo](./docs/img/icon-java-logo.png)]][java-jdk-dl-url]
 [![Maven logo](./docs/img/icon-maven-logo.png)][maven-url]
 [![Node.js logo](./docs/img/icons8/icon-nodejs-96.png)][nodejs-url]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![npm logo][npm-logo]][npmjs-url]
@@ -208,9 +209,7 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
 
 ## 9. License
 
-[![MIT License][license-badge-image]][license-url] © [Greg Swindle][author-url].
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/gregswindle/maven-code-quality-pom.svg?style=flat-square)](https://greenkeeper.io/)
+[MIT][license-url] © [Greg Swindle][author-url].
 
 [![FOSSA Status][fossa-large-badge]][fossa-large-url]
 
