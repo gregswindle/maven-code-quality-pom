@@ -1,7 +1,6 @@
 package net.swindle.springdemo.serviceimpl;
 
 import java.util.Random;
-
 import net.swindle.springdemo.service.BusinessService;
 
 public class EcommerceServiceImpl implements BusinessService {

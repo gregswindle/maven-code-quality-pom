@@ -12,6 +12,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+// TODO: Auto-generated Javadoc
+/** The Class AgencyRecruitmentServiceImplTest. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/resources/beans-cp.xml")
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
@@ -21,22 +23,25 @@ public class AgencyRecruitmentServiceImplTest {
 
   @Autowired private ApplicationContext ctx;
 
+  /** Before each. */
   @Before
   public void beforeEach() {
     agency = (AgencyRecruitmentServiceImpl) ctx.getBean("agency");
   }
 
+  /** Test agency recruitment service impl. */
   @Test
   public void testAgencyRecruitmentServiceImpl() {
     agency = (AgencyRecruitmentServiceImpl) ctx.getBean("agency");
     assertNotNull(agency);
   }
 
+  /** Test recruit employees. */
   @Test
   public void testRecruitEmployees() {
-    String companyName = "Verizon";
-    String departmentName = "HR";
-    String statement = agency.recruitEmployees(companyName, departmentName, 1);
+    final String companyName = "Verizon";
+    final String departmentName = "HR";
+    final String statement = agency.recruitEmployees(companyName, departmentName, 1);
     assertThat(statement, containsString(companyName));
     assertThat(statement, containsString(departmentName));
   }

@@ -1,7 +1,6 @@
 package net.swindle.springdemo.domain;
 
 import net.swindle.springdemo.service.BusinessService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**

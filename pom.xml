@@ -6,9 +6,9 @@
 	<!-- The Basics @see https://maven.apache.org/pom.html#The_Basics -->
 
 	<!-- Recommended Order -->
-	<!-- groupId version description url inceptionYear organization licenses 
-		developers contributors mailingLists scm issueManagement ciManagement properties 
-		dependencyManagement dependencies repositories pluginRepositories build plugin 
+	<!-- groupId version description url inceptionYear organization licenses
+		developers contributors mailingLists scm issueManagement ciManagement properties
+		dependencyManagement dependencies repositories pluginRepositories build plugin
 		executions with matching ids plugin configuration etc. reporting profiles -->
 
 	<modelVersion>4.0.0</modelVersion>
@@ -40,47 +40,49 @@
 		</developer>
 	</developers>
 
-	
+
 	<scm>
 		<url>https://github.com/gregswindle/maven-code-quality-pom</url>
 		<connection>scm:git:https://github.com/gregswindle/maven-code-quality-pom</connection>
 		<developerConnection>scm:git:https://github.com/gregswindle/maven-code-quality-pom</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-	
-	
-	
-	
+
+
+
+
 	<issueManagement>
 		<system>GitHub</system>
 		<url>${project.url}/issues</url>
-	</issueManagement><ciManagement>
+	</issueManagement>
+	<ciManagement>
 		<system>travis-ci</system>
 		<url>https://travis-ci.org/gregswindle/maven-code-quality-pom</url>
 	</ciManagement>
-	
+
 	<repositories>
-        <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-        </pluginRepository>
-      </pluginRepositories>
-	
+		<repository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<properties>
 		<checkstyle.version>8.4</checkstyle.version>
 		<coveralls.token>${env.COVERALLS_MAVEN_CODE_QUALITY_POM_TOKEN}</coveralls.token>
+		<fmt.maven.plugin.version>2.1.0</fmt.maven.plugin.version>
 		<jdk.version>1.8</jdk.version>
 		<license.maven.plugin.version>1.14</license.maven.plugin.version>
 		<maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
@@ -132,14 +134,14 @@
 			<artifactId>spring-boot-autoconfigure</artifactId>
 			<version>${spring.boot.version}</version>
 			<exclusions>
-			<exclusion>
-         <groupId>org.springframework</groupId>
-         <artifactId>spring-context</artifactId>
-       </exclusion>
-			 <exclusion>
-			   <groupId>org.springframework</groupId>
-			   <artifactId>spring-core</artifactId>
-			 </exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -212,27 +214,30 @@
 			<artifactId>google-java-format</artifactId>
 			<version>1.5</version>
 		</dependency>
+		<dependency>
+			<groupId>com.coveo</groupId>
+			<artifactId>fmt-maven-plugin</artifactId>
+			<version>${fmt.maven.plugin.version}</version>
+			<type>maven-plugin</type>
+		</dependency>
 	</dependencies>
 	<build>
-	  <directory>${project.basedir}/target</directory>
-	  <finalName>${project.artifactId}-${project.version}</finalName>
+		<directory>${project.basedir}/target</directory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
 		<testSourceDirectory>${project.basedir}/src/test/java</testSourceDirectory>
 		<scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
 		<resources>
-		  <resource>
-		    <directory>${project.basedir}/src/main/resources</directory>
-		  </resource>
-		  <resource>
-        <directory>${project.basedir}/src/qa/resources</directory>
-      </resource>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
 		</resources>
 		<testResources>
-		  <testResource>
-		    <directory>${project.basedir}/src/test/resources</directory>
-		  </testResource>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
 		</testResources>
-		
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -242,8 +247,8 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		
-		
+
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -259,20 +264,21 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.4</version>
 			</plugin>
-			<!-- JaCoCo (0) Code coverage configuration. Order of execution is: (1) 
-				Prepare agent is run to configure the property, then (2) Unit tests are run, 
+			<!-- JaCoCo (0) Code coverage configuration. Order of execution is: (1)
+				Prepare agent is run to configure the property, then (2) Unit tests are run,
 				then (3) Run jacoco's check goal to determine code coverage. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
 				<configuration>
-					<!-- JaCoCo (2) Setup the argLine and run the unit tests. **NOTE the 
-						"jacocArgLine" property was configured the "prepare-agent" goal of Jacoco 
-						(see below). If you want to resolve the property value as late as possible 
-						(i.e. your dynamically alter this property value before reaching this phase), 
+					<!-- JaCoCo (2) Setup the argLine and run the unit tests. **NOTE the
+						"jacocArgLine" property was configured the "prepare-agent" goal of Jacoco
+						(see below). If you want to resolve the property value as late as possible
+						(i.e. your dynamically alter this property value before reaching this phase),
 						Maven gives you option to use @{jacocoArgLine} instead -->
 					<argLine>${jacocoArgLine} -Xmx256m</argLine>
+					<dumpOnExit>true</dumpOnExit>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -317,8 +323,8 @@
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.7.9</version>
 				<executions>
-					<!-- JaCoCo (1) Prepare agent runs in the init phase, it setups the 
-						jacocoProperty, so we can insert this to the maven sure fire argLine and 
+					<!-- JaCoCo (1) Prepare agent runs in the init phase, it setups the
+						jacocoProperty, so we can insert this to the maven sure fire argLine and
 						get to run jacoco as agent. -->
 					<execution>
 						<id>prepare-agent</id>
@@ -332,7 +338,7 @@
 							</includes>
 						</configuration>
 					</execution>
-					<!-- JaCoCo (3) The check goal by default runs in the verify phase, 
+					<!-- JaCoCo (3) The check goal by default runs in the verify phase,
 						we want to fail the build if minimum code coverage checks aren't met. -->
 					<execution>
 						<id>check</id>
@@ -341,7 +347,7 @@
 						</goals>
 						<configuration>
 							<rules>
-								<!-- All classes must have 90% line and branch coverage. Note we 
+								<!-- All classes must have 90% line and branch coverage. Note we
 									use 2 d.p so that we get can any check failure messages reported to 2 d.p. -->
 								<rule>
 									<element>BUNDLE</element>
@@ -359,7 +365,7 @@
 										<limit>
 											<counter>COMPLEXITY</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.20</minimum>
+											<minimum>0.90</minimum>
 										</limit>
 										<limit>
 											<counter>LINE</counter>
@@ -479,6 +485,14 @@
 				<groupId>org.basepom.maven</groupId>
 				<artifactId>duplicate-finder-maven-plugin</artifactId>
 				<version>1.2.1</version>
+				<executions>
+				  <execution>
+				    <id>check</id>
+				    <goals>
+				      <goal>check</goal>
+				    </goals>
+				  </execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -493,38 +507,51 @@
 					<repoToken>${coveralls.token}</repoToken>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <version>${license.maven.plugin.version}</version>
-        <configuration>
-          <useMissingFile>true</useMissingFile>
-          <sortArtifactByName>true</sortArtifactByName>
-          <excludedScopes>test</excludedScopes>
-        </configuration>
-        <executions>
-          <execution>
-              <id>add-licenses</id>
-              <goals>
-                <goal>add-third-party</goal>
-                <goal>download-licenses</goal>
-              </goals>
-            </execution>
-          <execution>
-            <id>download-licenses</id>
-            <goals>
-              <goal>download-licenses</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>aggregate-download-licenses</id>
-            <goals>
-              <goal>aggregate-download-licenses</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>${license.maven.plugin.version}</version>
+				<configuration>
+					<useMissingFile>true</useMissingFile>
+					<sortArtifactByName>true</sortArtifactByName>
+					<excludedScopes>test</excludedScopes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>add-licenses</id>
+						<goals>
+							<goal>add-third-party</goal>
+							<goal>download-licenses</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>download-licenses</id>
+						<goals>
+							<goal>download-licenses</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>aggregate-download-licenses</id>
+						<goals>
+							<goal>aggregate-download-licenses</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.coveo</groupId>
+				<artifactId>fmt-maven-plugin</artifactId>
+				<version>${fmt.maven.plugin.version}</version>
+				<executions>
+					<execution>
+            <id>format</id>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<reporting>
@@ -556,7 +583,7 @@
 						</reports>
 					</reportSet>
 				</reportSets>
-				<!-- <configuration> <dependencyLocationsEnabled>true</dependencyLocationsEnabled> 
+				<!-- <configuration> <dependencyLocationsEnabled>true</dependencyLocationsEnabled>
 					</configuration> -->
 			</plugin>
 			<plugin>
@@ -616,7 +643,7 @@
 			<plugin>
 				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
-				<version>3.0.1</version>
+				<version>3.0.2</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -674,14 +701,15 @@
 			</plugin>
 
 
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-      </plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+			</plugin>
 
 
 		</plugins>
-	</reporting><profiles>
+	</reporting>
+	<profiles>
 		<profile>
 			<id>sonar</id>
 			<activation>
@@ -705,5 +733,5 @@
 			</properties>
 		</profile>
 	</profiles>
-	
+
 </project>

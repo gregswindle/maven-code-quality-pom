@@ -9,12 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+// TODO: Auto-generated Javadoc
+/** The Class EcommerceServiceImplTest. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/resources/beans-cp.xml")
 public class EcommerceServiceImplTest {
 
   @Autowired private EcommerceServiceImpl ecommerceService;
 
+  /** Test offer service. */
   @Test
   public void testOfferService() {
     assertThat(
