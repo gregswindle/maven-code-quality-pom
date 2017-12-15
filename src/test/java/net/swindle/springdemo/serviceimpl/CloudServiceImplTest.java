@@ -10,6 +10,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+// TODO: Auto-generated Javadoc
+/** The Class CloudServiceImplTest. */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/resources/beans-cp.xml")
 // @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")
@@ -19,6 +21,7 @@ public class CloudServiceImplTest {
 
   @Autowired private ApplicationContext ctx;
 
+  /** Test offer service. */
   @Test
   public void testOfferService() {
     cloudService = (CloudServiceImpl) ctx.getBean("cloudService");

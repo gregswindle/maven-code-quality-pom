@@ -772,7 +772,7 @@
  | [markdown-magic-install-command@1.3.1](https://github.com/camacho/markdown-magic-install-command#readme) | Print install command for markdown file | 1.3.1 | MIT | dev | 
  | [markdown-magic-package-scripts@1.2.1](https://github.com/camacho/markdown-magic-package-scripts#readme) | Print list of scripts in package.json with descriptions | 1.2.1 | MIT | dev | 
  | [nsp@3.1.0](https://github.com/nodesecurity/nsp#readme) | The Node Security (nodesecurity.io) command line interface | 3.1.0 | Apache-2.0 | dev | 
- | [snyk@1.48.1](https://github.com/snyk/snyk#readme) | snyk library and cli utility | 1.48.1 | Apache-2.0 | dev | 
+ | [snyk@1.49.1](https://github.com/snyk/snyk#readme) | snyk library and cli utility | 1.48.1 | Apache-2.0 | dev | 
  | [standard-version@4.2.0](https://github.com/conventional-changelog/standard-version#readme) | replacement for `npm version` with automatic CHANGELOG generation | 4.2.0 | ISC | dev | 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE:dev=true) -->
 <!-- AUTO-GENERATED-CONTENT:END -->

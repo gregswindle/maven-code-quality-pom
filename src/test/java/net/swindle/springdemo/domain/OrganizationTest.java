@@ -2,14 +2,13 @@ package net.swindle.springdemo.domain;
 
 import static org.junit.Assert.assertNotNull;
 
+import net.swindle.springdemo.serviceimpl.CloudServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import net.swindle.springdemo.serviceimpl.CloudServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/resources/beans-cp.xml")

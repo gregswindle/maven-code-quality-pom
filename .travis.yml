@@ -36,6 +36,9 @@ script:
 after_script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar coveralls:report
 
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
+
 cache:
   directories:
     - '$HOME/.m2/repository'

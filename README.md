@@ -1,4 +1,5 @@
 # `maven-code-quality-pom`
+
 > Enforce and report code quality with JUnit, JaCoCo, Hamcrest, FindBugs, PMD, CodeNarc, Checkstyle (Google), Enforcer, Duplicate-Finder, JDepend, and more with this Maven POM.
 
 [![License][license-badge-image]][license-url]
@@ -9,30 +10,30 @@
 [![Dependency Status][dependencyci-badge-image]][dependencyci-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/gregswindle/maven-code-quality-pom.svg?style=flat-square)](https://greenkeeper.io/)
 
 ## Table of contents
+
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (TOC:excludeText=Table of contents) -->
 - [1. Overview](#1-overview)
 - [2. Prerequisite software](#2-prerequisite-software)
 - [3. Installation](#3-installation)
-- [4. Configuration](#4-configuration)
-- [5. Usage](#5-usage)
-  * [5.1. Generate site files](#51-generate-site-files)
-  * [5.2. Launch the site on a Jetty web server](#52-launch-the-site-on-a-jetty-web-server)
-  * [5.3. Export reports to SonarCloud.io](#53-export-reports-to-sonarcloudio)
-  * [5.4. Run quality checks](#54-run-quality-checks)
-    + [5.4.1. `mvn enforcer:display-info`](#541-mvn-enforcerdisplay-info)
-    + [5.4.2. `mvn enforcer:display-info`](#542-mvn-enforcerdisplay-info)
-    + [5.4.3. `mvn site`](#543-mvn-site)
-    + [5.4.4. `mvn checkstyle:check`](#544-mvn-checkstylecheck)
-    + [5.4.5. `mvn duplicate-finder:check`](#545-mvn-duplicate-findercheck)
-    + [5.4.6. `mvn findbugs:check`](#546-mvn-findbugscheck)
-    + [5.4.7. `mvn pmd:check`](#547-mvn-pmdcheck)
-    + [5.4.8. `mvn pmd:cpd-check`](#548-mvn-pmdcpd-check)
-- [6. Security](#6-security)
-- [7. Semantic version and `CHANGELOG`](#7-semantic-version-and-changelog)
-- [8. Contributing to `maven-code-quality-pom`](#8-contributing-to-maven-code-quality-pom)
-- [9. License](#9-license)
+- [4. Usage](#4-usage)
+  * [4.1. Run unit tests, evaluate complexity, and check coverage](#41-run-unit-tests-evaluate-complexity-and-check-coverage)
+  * [4.2. Generate site files](#42-generate-site-files)
+  * [4.3. Run quality checks](#43-run-quality-checks)
+    + [4.3.1. `mvn fmt:check`](#431-mvn-fmtcheck)
+    + [4.3.2. `mvn enforcer:display-info`](#432-mvn-enforcerdisplay-info)
+    + [4.3.3. `mvn site`](#433-mvn-site)
+    + [4.3.4. `mvn checkstyle:check`](#434-mvn-checkstylecheck)
+    + [4.3.5. `mvn duplicate-finder:check`](#435-mvn-duplicate-findercheck)
+    + [4.3.6. `mvn findbugs:check`](#436-mvn-findbugscheck)
+    + [4.3.7. `mvn pmd:check`](#437-mvn-pmdcheck)
+    + [4.3.8. `mvn pmd:cpd-check`](#438-mvn-pmdcpd-check)
+  * [4.3. Export reports to SonarCloud.io](#43-export-reports-to-sonarcloudio)
+- [5. Semantic version and `CHANGELOG`](#5-semantic-version-and-changelog)
+- [6. Contributing to `maven-code-quality-pom`](#6-contributing-to-maven-code-quality-pom)
+- [7. License](#7-license)
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
 
@@ -45,7 +46,7 @@ Enforce and report code quality with:
   1. **Duplicate-Finder** ([`duplicate-finder-maven-plugin`](https://github.com/basepom/duplicate-finder-maven-plugin))
   1. **Enforcer** ([`maven-enforcer-plugin`](http://maven.apache.org/enforcer/maven-enforcer-plugin/))
   1. **FindBugs** ([`findbugs-maven-plugin`](http://gleclaire.github.io/findbugs-maven-plugin/))
-  1. **Hamcrest** ([`hamcrest-junit`](https://github.com/hamcrest/hamcrest-junit))
+  1. **fmt-maven-plugin** formats your code using [`google-java-format`](https://github.com/google/google-java-format), which follows [Google's code styleguide](https://google.github.io/styleguide/javaguide.html) ([`fmt-maven-plugin`](https://github.com/coveo/fmt-maven-plugin))
   1. **JDepend** ([`jdepend-maven-plugin`](http://mojo.codehaus.org/jdepend-maven-plugin))
   1. **JUnit** ([`junit5`](http://junit.org/junit5/) with [`junit4`](http://junit.org/junit4/) backwards compatibility)
   1. **JaCoCo** ([`jacoco-maven-plugin`](http://www.eclemma.org/jacoco/trunk/doc/maven.html))
@@ -59,13 +60,12 @@ and more with this Maven POM.
 The **purpose of the project** is to use the Maven Site Plugin to:
 
   1. Use the Maven Site Plugin to generate meaningful test and quality reporting artifacts
-  2. Enforce test coverage thresholds and code standards
-  3. Prevent source code that does not conform to standards from being merged into `master`.
+  1. Enforce test coverage thresholds and code standards
+  1. Prevent source code that does not conform to standards from being merged into `master`.
 
 ## 2. Prerequisite software
 
-[![Java logo](./docs/img/icon-java-logo.png)][![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom?ref=badge_shield)
-[java-jdk-dl-url]
+[![Java logo](./docs/img/icon-java-logo.png)]][java-jdk-dl-url]
 [![Maven logo](./docs/img/icon-maven-logo.png)][maven-url]
 [![Node.js logo](./docs/img/icons8/icon-nodejs-96.png)][nodejs-url]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 [![npm logo][npm-logo]][npmjs-url]
@@ -73,8 +73,8 @@ The **purpose of the project** is to use the Maven Site Plugin to:
 `maven-code-quality-pom` is written in Java, which must be installed prior to use. `maven-code-quality-pom` manages Java dependencies with Maven and NPM for JavaScript dependencies.
 
  1. **Java<sup>:tm:</sup> EE 8 SDK:** Either
-    * [`oracle64-1.8.x1`][java-jdk-dl-url] or
-    * [`openjdk:8-jdk-alpine`](https://github.com/docker-library/openjdk/blob/b4f29ba829765552239bd18f272fcdaf09eca259/8-jdk/alpine/Dockerfile)
+    - [`oracle64-1.8.x1`][java-jdk-dl-url] or
+    - [`openjdk:8-jdk-alpine`](https://github.com/docker-library/openjdk/blob/b4f29ba829765552239bd18f272fcdaf09eca259/8-jdk/alpine/Dockerfile)
 
  1. [**Maven**][maven-dl-url]
  1. [**Node.js**][nodejs-url], which includes the [node package manager (**npm**)][npmjs-url].
@@ -102,13 +102,15 @@ The **purpose of the project** is to use the Maven Site Plugin to:
   $ npm install
   ```
 
-## 4. Configuration
+## 4. Usage
 
-TBD.
+### 4.1. Run unit tests, evaluate complexity, and check coverage
 
-## 5. Usage
+```bash
+$ mvn test verify
+```
 
-### 5.1. Generate site files
+### 4.2. Generate site files
 
 To build the Maven reports site, open a Terminal and run:
 
@@ -118,23 +120,49 @@ $ mvn site
 
 Then open `maven-code-quality-pom/target/site/index.html` in a Web browser.
 
-### 5.2. Launch the site on a Jetty web server
+### 4.3. Run quality checks
 
-Open a Terminal and run:
+- #### 4.3.1. `mvn fmt:check`
 
-```bash
-$ mvn site:run
-```
+  > Formats all src/ and test/ Java code according to the Google Java style guide.
 
-Then open http://localhost:8080 in a browser.
+  > :information_source: `mvn fmt:format` runs with every build.
 
-### 5.3. Export reports to SonarCloud.io
+- #### 4.3.2. `mvn enforcer:display-info`
+
+  > Executes the defined enforcer-rules once per module and displays the current platform information
+
+- #### 4.3.3. `mvn site`
+
+  > Generates the site for a single project.
+
+- #### 4.3.4. `mvn checkstyle:check`
+
+  > Performs Checkstyle analysis and outputs violations or a count of violations to the console, potentially failing the build.
+
+- #### 4.3.5. `mvn duplicate-finder:check`
+
+  > Finds duplicate classes/resources on the classpath.
+
+- #### 4.3.6. `mvn findbugs:check`
+
+  > Identify defect (bug) patterns in your Java source code.
+
+- #### 4.3.7. `mvn pmd:check`
+
+  > Fail the build if there were any PMD violations in the source code.
+
+- #### 4.3.8. `mvn pmd:cpd-check`
+
+  > Fail the build if there were any CPD violations in the source code.
+
+### 4.3. Export reports to SonarCloud.io
 [![SonarCloud logo][sonar-cloud-icon]][sonar-cloud-url]
 
 > **Before you connect to SonarCloud, you need:**
 >
->  * An active account on https://sonarcloud.io
->  * To set the `ENVIRONMENT` variable `$SONAR_TOKEN`
+>  - An active account on https://sonarcloud.io
+>  - To set the `ENVIRONMENT` variable `$SONAR_TOKEN`
 >
 > [See "Using SonarCloud with Travis CI"](https://docs.travis-ci.com/user/sonarcloud) for details.
 
@@ -146,68 +174,27 @@ $ mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
 
 > [View reports on SonarCloud](https://sonarcloud.io/dashboard?id=gregswindle-github).
 
-### 5.4. Run quality checks
-
-  * #### 5.4.1. `mvn enforcer:display-info`
-
-    > Executes the defined enforcer-rules once per module.
-
-
-  * #### 5.4.2. `mvn enforcer:display-info`
-
-    > Displays the current platform information
-
-  * #### 5.4.3. `mvn site`
-
-    > Generates the site for a single project.
-
-  * #### 5.4.4. `mvn checkstyle:check`
-
-    > Performs Checkstyle analysis and outputs violations or a count of violations to the console, potentially failing the build.
-
-  * #### 5.4.5. `mvn duplicate-finder:check`
-
-    > Finds duplicate classes/resources on the classpath.
-
-
-  * #### 5.4.6. `mvn findbugs:check`
-
-    > Identify defect (bug) patterns in your Java source code.
-
-  * #### 5.4.7. `mvn pmd:check`
-
-    > Fail the build if there were any PMD violations in the source code.
-
-
-  * #### 5.4.8. `mvn pmd:cpd-check`
-
-    > Fail the build if there were any CPD violations in the source code.
-
-
-## 6. Security
-
-_Highlight important security issues/concerns in this section._
-
-## 7. Semantic version and `CHANGELOG`
+## 5. Semantic version and `CHANGELOG`
 
 The latest version of `maven-code-quality-pom` is `0.0.1-SNAPSHOT`. View the [`CHANGELOG`][changelog-url] for details.
 
-## 8. Contributing to `maven-code-quality-pom`
+## 6. Contributing to `maven-code-quality-pom`
+
 > [![Learn how to make a Pull Request with free training][prs-welcome-badge-image]][prs-welcome-url]
 >
 > We welcome contributors with [Pull Requests][prs-welcome-url]!
 
-**[Read Contributing to `maven-code-quality-pom` to get started.][contributing-url]**
+**[:four_leaf_clover: Read Contributing to `maven-code-quality-pom` to get started. :four_leaf_clover:][contributing-url]**
 
 Contributions in the form of GitHub pull requests are welcome. Before embarking on a significant change, please adhere to the following guidelines:
 
   1. Read the [Code of Conduct][code-of-conduct-url].
   1. Create an issue to discuss the proposed change and ensure that it is likely to be merged:
-      * [Report a defect][issues-new-defect-url] (aka "bug")
-      * [Request a new feature][issues-new-feat-url]
+      - [Report a defect][issues-new-defect-url] (aka "bug")
+      - [Request a new feature][issues-new-feat-url]
   1. Follow [Contributing to `maven-code-quality-pom`][contributing-url]'s coding conventions and Git workflow if you're willing and able to program (or want to learn how).
 
-## 9. License
+## 7. License
 
 [MIT][license-url] © [Greg Swindle][author-url].
 
@@ -255,6 +242,3 @@ Contributions in the form of GitHub pull requests are welcome. Before embarking 
 [travis-url]: https://travis-ci.org/gregswindle/maven-code-quality-pom
 [versioneye-badge-image]: https://www.versioneye.com/user/projects/5a012f2f2de28c58f8c7a10f/badge.svg?style=flat-square
 [versioneye-url]: https://www.versioneye.com/user/projects/5a012f2f2de28c58f8c7a10f
-
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgregswindle%2Fmaven-code-quality-pom?ref=badge_large)
