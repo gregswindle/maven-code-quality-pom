@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AgencyRecruitmentServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">maven-code-quality-pom</a> &gt; <a href="index.source.html" class="el_package">net.swindle.springdemo.serviceimpl</a> &gt; <span class="el_source">AgencyRecruitmentServiceImpl.java</span></div><h1>AgencyRecruitmentServiceImpl.java</h1><pre class="source lang-java linenums">package net.swindle.springdemo.serviceimpl;
 
 import java.util.Random;
-
 import net.swindle.springdemo.service.RecruitmentService;
 
 /**
@@ -9,7 +8,7 @@ import net.swindle.springdemo.service.RecruitmentService;
  *
  * @author swindle
  */
-<span class="fc" id="L12">public class AgencyRecruitmentServiceImpl implements RecruitmentService {</span>
+<span class="fc" id="L11">public class AgencyRecruitmentServiceImpl implements RecruitmentService {</span>
 
   /* (non-Javadoc)
    * @see net.swindle.springdemo.service.RecruitmentService#recruitEmployees(java.lang.String,
@@ -18,13 +17,13 @@ import net.swindle.springdemo.service.RecruitmentService;
   @Override
   public String recruitEmployees(
       String companyName, String departmentName, int numberOfRecruitments) {
-<span class="fc" id="L21">    final Random random = new Random();</span>
-<span class="fc" id="L22">    return &quot;\n&quot;</span>
+<span class="fc" id="L20">    final Random random = new Random();</span>
+<span class="fc" id="L21">    return &quot;\n&quot;</span>
         + companyName
         + &quot;'s &quot;
         + departmentName
         + &quot; hired &quot;
-<span class="fc" id="L27">        + random.nextInt(numberOfRecruitments)</span>
+<span class="fc" id="L26">        + random.nextInt(numberOfRecruitments)</span>
         + &quot; employees &quot;
         + &quot;using various hiring agencies.&quot;;
   }

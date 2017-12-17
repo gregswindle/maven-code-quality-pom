@@ -20,35 +20,40 @@
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> org.springframework.test.context.ContextConfiguration;
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>  
-<a class="jxr_linenumber" name="L15" href="#L15">15</a>  @RunWith(SpringJUnit4ClassRunner.<strong class="jxr_keyword">class</strong>)
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>  @ContextConfiguration(<span class="jxr_string">"file:src/main/resources/beans-cp.xml"</span>)
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_comment">// @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")</em>
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../net/swindle/springdemo/serviceimpl/AgencyRecruitmentServiceImplTest.html">AgencyRecruitmentServiceImplTest</a> {
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>    @Autowired <strong class="jxr_keyword">private</strong> AgencyRecruitmentServiceImpl agency;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_comment">// TODO: Auto-generated Javadoc</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment">/** The Class AgencyRecruitmentServiceImplTest. */</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  @RunWith(SpringJUnit4ClassRunner.<strong class="jxr_keyword">class</strong>)
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  @ContextConfiguration(<span class="jxr_string">"file:src/main/resources/beans-cp.xml"</span>)
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_comment">// @ContextConfiguration("file:src/test/resources/test-beans-cp.xml")</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../net/swindle/springdemo/serviceimpl/AgencyRecruitmentServiceImplTest.html">AgencyRecruitmentServiceImplTest</a> {
 <a class="jxr_linenumber" name="L21" href="#L21">21</a>  
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>    @Autowired <strong class="jxr_keyword">private</strong> ApplicationContext ctx;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>    @Autowired <strong class="jxr_keyword">private</strong> AgencyRecruitmentServiceImpl agency;
 <a class="jxr_linenumber" name="L23" href="#L23">23</a>  
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>    @Before
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> beforeEach() {
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>      agency = (AgencyRecruitmentServiceImpl) ctx.getBean(<span class="jxr_string">"agency"</span>);
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>    }
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>    @Test
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAgencyRecruitmentServiceImpl() {
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>      agency = (AgencyRecruitmentServiceImpl) ctx.getBean(<span class="jxr_string">"agency"</span>);
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>      assertNotNull(agency);
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>    }
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>    @Test
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRecruitEmployees() {
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>      String companyName = <span class="jxr_string">"Verizon"</span>;
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>      String departmentName = <span class="jxr_string">"HR"</span>;
-<a class="jxr_linenumber" name="L39" href="#L39">39</a>      String statement = agency.recruitEmployees(companyName, departmentName, 1);
-<a class="jxr_linenumber" name="L40" href="#L40">40</a>      assertThat(statement, containsString(companyName));
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>      assertThat(statement, containsString(departmentName));
-<a class="jxr_linenumber" name="L42" href="#L42">42</a>    }
-<a class="jxr_linenumber" name="L43" href="#L43">43</a>  }
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>    @Autowired <strong class="jxr_keyword">private</strong> ApplicationContext ctx;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>    <em class="jxr_javadoccomment">/** Before each. */</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>    @Before
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> beforeEach() {
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      agency = (AgencyRecruitmentServiceImpl) ctx.getBean(<span class="jxr_string">"agency"</span>);
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>    }
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>    <em class="jxr_javadoccomment">/** Test agency recruitment service impl. */</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>    @Test
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testAgencyRecruitmentServiceImpl() {
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      agency = (AgencyRecruitmentServiceImpl) ctx.getBean(<span class="jxr_string">"agency"</span>);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      assertNotNull(agency);
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>    }
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>    <em class="jxr_javadoccomment">/** Test recruit employees. */</em>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>    @Test
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testRecruitEmployees() {
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      <strong class="jxr_keyword">final</strong> String companyName = <span class="jxr_string">"Verizon"</span>;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      <strong class="jxr_keyword">final</strong> String departmentName = <span class="jxr_string">"HR"</span>;
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      <strong class="jxr_keyword">final</strong> String statement = agency.recruitEmployees(companyName, departmentName, 1);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      assertThat(statement, containsString(companyName));
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      assertThat(statement, containsString(departmentName));
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>    }
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2017 <a href="https://github.com/gregswindle">gregswindle</a>. All rights reserved.</div>

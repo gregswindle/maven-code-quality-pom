@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -85,12 +86,14 @@
 		<fmt.maven.plugin.version>2.1.0</fmt.maven.plugin.version>
 		<jdk.version>1.8</jdk.version>
 		<license.maven.plugin.version>1.14</license.maven.plugin.version>
+		<error.prone.core.version>2.1.1</error.prone.core.version>
 		<maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
 		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
 		<maven.dependency.plugin.version>2.10</maven.dependency.plugin.version>
 		<maven.pmd.plugin.version>3.8</maven.pmd.plugin.version>
 		<maven.resources.plugin.version>2.6</maven.resources.plugin.version>
 		<maven.surefire.plugin.version>2.19.1</maven.surefire.plugin.version>
+		<org.pitest.version>1.2.5</org.pitest.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sonar.property.login>${env.SONAR_TOKEN}</sonar.property.login>
@@ -247,9 +250,19 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-
-
 		<plugins>
+			<plugin>
+				<groupId>com.coveo</groupId>
+				<artifactId>fmt-maven-plugin</artifactId>
+				<version>${fmt.maven.plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -257,7 +270,27 @@
 				<configuration>
 					<source>${jdk.version}</source>
 					<target>${jdk.version}</target>
+					<compilerId>javac-with-errorprone</compilerId>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
+					<showWarnings>true</showWarnings>
+					<compilerArgs>
+						<arg>-Xlint:all</arg>
+					</compilerArgs>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.plexus</groupId>
+						<artifactId>plexus-compiler-javac-errorprone</artifactId>
+						<version>2.8.1</version>
+					</dependency>
+					<!-- override plexus-compiler-javac-errorprone's dependency on Error 
+						Prone with the latest version -->
+					<dependency>
+						<groupId>com.google.errorprone</groupId>
+						<artifactId>error_prone_core</artifactId>
+						<version>${error.prone.core.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -316,6 +349,24 @@
 				<version>${maven.checkstyle.plugin.version}</version>
 				<configuration>
 					<configLocation>google_checks.xml</configLocation>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-html-report</artifactId>
+				<version>${org.pitest.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>${org.pitest.version}</version>
+				<configuration>
+					<targetClasses>
+						<param>net.swindle.springdemo*</param>
+					</targetClasses>
+					<targetTests>
+						<param>com.trademore*</param>
+					</targetTests>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -486,12 +537,12 @@
 				<artifactId>duplicate-finder-maven-plugin</artifactId>
 				<version>1.2.1</version>
 				<executions>
-				  <execution>
-				    <id>check</id>
-				    <goals>
-				      <goal>check</goal>
-				    </goals>
-				  </execution>
+					<execution>
+						<id>check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
 				</executions>
 			</plugin>
 			<plugin>
@@ -590,9 +641,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
-				<configuration>
+				<configuration />
 
-				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
