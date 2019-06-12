@@ -35,7 +35,7 @@
     "markdown-magic-install-command": "1.3.1",
     "markdown-magic-package-scripts": "1.2.1",
     "nsp": "3.1.0",
-    "snyk": "1.49.1",
+    "snyk": "1.175.3",
     "standard-version": "4.2.0"
   },
   "homepage": "https://github.com/gregswindle/maven-code-quality-pom",
